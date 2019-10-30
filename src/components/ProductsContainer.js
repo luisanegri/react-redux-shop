@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import Products from './Products';
 
 class ProductsContainer extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    //   console.log('hi')
+  }
 
   render() {
     if (!this.props.albums) {
