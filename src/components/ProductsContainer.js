@@ -10,6 +10,7 @@ class ProductsContainer extends React.Component {
   }
 
   render() {
+    console.log("Product details");
     if (!this.props.products) {
       return <p>Loading...</p>;
     } else {

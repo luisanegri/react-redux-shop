@@ -2,13 +2,15 @@ import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import ProductsContainer from "./components/ProductsContainer";
+import ProductDetailContainer from "./components/ProductDetailContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/" component={ProductsContainer}></Route>
+        <Route exact path="/" component={ProductsContainer}></Route>
+        <Route path="/product/:id" component={ProductDetailContainer}></Route>
       </Switch>
     </div>
   );
