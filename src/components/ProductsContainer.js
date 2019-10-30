@@ -1,16 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import ProductsList from "./ProductsList";
-import { getProducts } from "../actions/products";
+import React from 'react';
+import { connect } from 'react-redux';
+import ProductsList from './ProductsList';
+import { getProducts } from '../actions/products';
 
 class ProductsContainer extends React.Component {
   componentDidMount() {
-    //   console.log('hi')
     this.props.getProducts();
   }
 
   render() {
-    console.log("Product details");
     if (!this.props.products) {
       return <p>Loading...</p>;
     } else {
