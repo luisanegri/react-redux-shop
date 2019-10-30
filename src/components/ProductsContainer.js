@@ -8,12 +8,13 @@ class ProductsContainer extends React.Component {
   }
 
   render() {
-    if (!this.props.albums) {
+    console.log('Product details');
+    if (!this.props.products) {
       return <p>Loading...</p>;
     } else {
       return (
         <div>
-          <Products albums={this.props.albums} />
+          <Products products={this.props.products} />
         </div>
       );
     }
