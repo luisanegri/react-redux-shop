@@ -1,8 +1,9 @@
-import React from 'react';
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import ProductsContainer from './components/ProductsContainer';
-import ProductDetailContainer from './components/ProductDetailContainer';
+import React from "react";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import ProductsContainer from "./components/ProductsContainer";
+import ProductDetailContainer from "./components/ProductDetailContainer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
