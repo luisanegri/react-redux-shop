@@ -8,6 +8,7 @@ export default function ProductDetail(props) {
       {/* {props.products.map(product => (
         <p>{product.name}</p>
       ))} */}
+      <p>Hi</p>
       {props.product.name}
     </div>
   );
