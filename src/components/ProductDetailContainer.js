@@ -6,6 +6,7 @@ import { getProductDetail } from '../actions/product-detail';
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
+    console.log('product id?', productId);
     // call function here!
     this.props.getProductDetail(productId);
   }

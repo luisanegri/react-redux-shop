@@ -19,7 +19,7 @@ export function getProductDetail(productId) {
       .then(product => {
         console.log('product', product);
         dispatch(setProductsDetails(product));
-        console.log(product);
+        console.log('product?????', product);
       });
   };
 }
