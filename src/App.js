@@ -5,12 +5,14 @@ import ProductsContainer from "./components/ProductsContainer";
 import ProductDetailContainer from "./components/ProductDetailContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
+// import NavBarContainer from "./components/NavbarContainer";
 import WishListContainer from "./components/WishListContainer";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      {/* <NavBarContainer /> */}
       <Switch>
         <Route exact path="/" component={ProductsContainer}></Route>
         <Route path="/product/:id" component={ProductDetailContainer}></Route>
