@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Cart from './Cart';
 import { deleteFromCart } from '../actions/cart';
+import { increment } from '../actions/cart';
 
 class CartContainer extends React.Component {
   componentDidMount() {}
@@ -12,6 +13,7 @@ class CartContainer extends React.Component {
         <Cart
           cart={this.props.cart}
           deleteFromCart={this.props.deleteFromCart}
+          increment={this.props.increment}
         />
       </div>
     );
@@ -31,7 +33,8 @@ const mapActionsToProps = () => {
   return {
     // getProductDetail: getProductDetail,
     // addToCart: addToCart
-    deleteFromCart: deleteFromCart
+    deleteFromCart: deleteFromCart,
+    increment: increment
   };
 };
 
