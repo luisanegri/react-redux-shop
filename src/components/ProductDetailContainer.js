@@ -1,19 +1,24 @@
-import React from "react";
-import { connect } from "react-redux";
-import ProductDetail from "./ProductDetail";
-import { getProductDetail } from "../actions/product-detail";
-import { addToCart } from "../actions/cart";
+
+import React from 'react';
+import { connect } from 'react-redux';
+import ProductDetail from './ProductDetail';
+import { getProductDetail } from '../actions/product-detail';
+import { addToCart } from '../actions/cart';
 import { addWish } from "../actions/wish";
 
-// import Cart from './Cart';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
     console.log("product id?", productId);
     this.props.getProductDetail(productId);
+
+    // we dont want to add something to the cart immediately!
+    //only if the button is clicked!
+    //this.props.addToCart();
     this.props.addToCart();
     // this.props.addWish();
+
   }
 
   addToCart = () => {
@@ -40,7 +45,6 @@ class ProductDetailContainer extends React.Component {
           addToCart={this.props.addToCart}
           addWish={this.props.addWish}
         />
-        {/* <Cart /> */}
       </div>
     );
   }
@@ -53,7 +57,7 @@ class ProductDetailContainer extends React.Component {
 const mapStateToProps = state => {
   console.log("mapstate", state);
   return {
-    product: state.productDetail,
+    product: state.productDetail
     cart: state.cart,
     wish: state.wish
   };

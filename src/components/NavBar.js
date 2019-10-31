@@ -23,7 +23,7 @@ export default function ProductDetail(props) {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 navbar-nav-custom">
             <li className="nav-item active">
-              <Link className="nav-link link-custom" to="/">
+              <Link className="nav-link link-custom" to="/cart">
                 Cart
                 <i className="fa fa-shopping-cart"></i>
               </Link>
