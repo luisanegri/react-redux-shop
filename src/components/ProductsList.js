@@ -11,15 +11,22 @@ export default function ProductList(props) {
           {props.products.map(product => (
             <div class="col-md-4 col-mb">
               <div className="card product-list">
-                <Link to={`/product/${product.id}`}>
+                <div className="image-wrapper">
                   <img
                     src={product.imageUrl}
                     className="card-img-top"
                     alt="productdisplay"
                     key={product.id}
                   />
-                  <h5 class="card-title">{product.name}</h5>
-                </Link>
+                  <Link to={`/product/${product.id}`}>
+                    <div class="middle">
+                      <div class="text">View</div>
+                    </div>
+                  </Link>
+                </div>
+
+                <h5 class="card-title">{product.name}</h5>
+
                 {/* <p className="card-text">{product.price} </p> */}
               </div>
             </div>
