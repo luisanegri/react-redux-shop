@@ -15,6 +15,8 @@ body {
   border-color: black;
   left: 50%;
   transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .right-col .btn-add-cart:first-child {
@@ -95,5 +97,31 @@ body {
   padding: 20px;
 }
 
-.detail-product {
+.col-right-cart .btn-delete,
+.col-left-cart .btn-delete {
+  padding: 0;
+  color: black;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.btn-delete span i {
+  font-size: 11px;
+}
+
+.btn-delete span {
+  margin-right: 4px;
+}
+
+.col-right-cart {
+  margin-top: 50px;
+}
+
+th,
+td {
+  font-size: 14px;
+}
+
+tbody th {
+  font-weight: normal;
 }

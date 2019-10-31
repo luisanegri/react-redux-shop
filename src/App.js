@@ -5,6 +5,7 @@ import ProductsContainer from './components/ProductsContainer';
 import ProductDetailContainer from './components/ProductDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
+import CartContainer from './components/CartContainer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ProductsContainer}></Route>
         <Route path="/product/:id" component={ProductDetailContainer}></Route>
+        <Route path="/cart" component={CartContainer} />
       </Switch>
     </div>
   );
