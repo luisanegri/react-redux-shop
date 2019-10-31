@@ -1,8 +1,8 @@
-const reducer = (state = {}, action = {}) => {
+const reducer = (state = [], action = {}) => {
   console.log('state', state);
   switch (action.type) {
-    case 'SET_PRODUCTS_DETAILS':
-      return { ...action.payload };
+    case 'ADD_TO_CART':
+      return [...state, action.payload.product];
     default:
       return state;
   }

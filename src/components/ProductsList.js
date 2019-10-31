@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductList(props) {
   return (
@@ -19,7 +20,7 @@ export default function ProductList(props) {
                 <img
                   src={product.imageUrl}
                   className="card-img-top"
-                  alt="product image"
+                  alt="productdisplay"
                   key={product.id}
                 />{" "}
                 <div className="card-body">
@@ -29,6 +30,11 @@ export default function ProductList(props) {
                     Vieuw Product
                   </a>
                 </div>
+                />
+                <h5 class="card-title">{product.name}</h5>
+                <Link to={`/product/${product.id}`} className="btn btn-primary">
+                  Go somewhere
+                </Link>
               </div>
             </div>
           ))}
