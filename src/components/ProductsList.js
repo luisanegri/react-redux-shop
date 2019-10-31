@@ -13,22 +13,25 @@ export default function ProductList(props) {
       </ul>
       <div className="container">
         <div class="row">
-          <div class="col-md-4">
-            {props.products.map(product => (
+          {props.products.map(product => (
+            <div class="col-md-4">
               <div className="card">
                 <img
                   src={product.imageUrl}
                   className="card-img-top"
                   alt="product image"
                   key={product.id}
-                />
-                <h5 class="card-title">{product.name}</h5>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
+                />{" "}
+                <div className="card-body">
+                  <h5 class="card-title">{product.name}</h5>
+                  <p className="card-text">{product.price} </p>
+                  <a href="#" className="btn btn-primary">
+                    Vieuw Product
+                  </a>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -46,7 +49,7 @@ export default function ProductList(props) {
       One of three columns
     </div>
         <div className="card">
-          <div className="card-body">
+         
             <h5 className="card-title">Card title</h5>
             <p className="card-text">
               Some quick example text to build on the card title and make up the

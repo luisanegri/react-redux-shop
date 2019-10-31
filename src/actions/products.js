@@ -1,4 +1,5 @@
 export const SET_PRODUCTS = "SET_PRODUCTS";
+export const ADD_WISH = "ADD_WISH";
 
 export function setProducts(products) {
   return {
