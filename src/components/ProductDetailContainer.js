@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import { getProductDetail } from '../actions/product-detail';
 import { addToCart } from '../actions/cart';
-import Cart from './Cart';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
