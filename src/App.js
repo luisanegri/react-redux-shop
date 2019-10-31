@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      {/* <NavBarContainer /> */}
       <Switch>
         <Route exact path="/" component={ProductsContainer}></Route>
         <Route path="/product/:id" component={ProductDetailContainer}></Route>
