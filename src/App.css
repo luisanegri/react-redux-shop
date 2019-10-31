@@ -3,6 +3,28 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  position: relative;
+}
+
+.App {
+  padding-bottom: 80px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
 
 .right-col .btn-add-cart,
 .right-col .btn-add-wish {
@@ -78,7 +100,9 @@ body {
 }
 
 .col-left img {
-  width: 90%;
+  width: 480px;
+  margin: 0 auto;
+  display: block;
 }
 
 .col-left {
@@ -205,4 +229,9 @@ tbody th {
 
 .qty {
   text-align: center;
+}
+
+.btn {
+  outline: none;
+  box-shadow: none !important;
 }

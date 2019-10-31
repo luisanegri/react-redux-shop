@@ -6,8 +6,8 @@ import ProductDetailContainer from './components/ProductDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import CartContainer from './components/CartContainer';
-import WishListContainer from "./components/WishListContainer";
-
+import WishListContainer from './components/WishListContainer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/cart" component={CartContainer} />
         <Route path="/wishlist" component={WishListContainer}></Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
