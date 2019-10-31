@@ -26,15 +26,13 @@ export default function ProductList(props) {
                 <div className="card-body">
                   <h5 class="card-title">{product.name}</h5>
                   <p className="card-text">{product.price} </p>
-                  <a href="#" className="btn btn-primary">
-                    Vieuw Product
-                  </a>
+                  <Link
+                    to={`/product/${product.id}`}
+                    className="btn btn-primary"
+                  >
+                    Go somewhere
+                  </Link>
                 </div>
-                />
-                <h5 class="card-title">{product.name}</h5>
-                <Link to={`/product/${product.id}`} className="btn btn-primary">
-                  Go somewhere
-                </Link>
               </div>
             </div>
           ))}

@@ -6,9 +6,15 @@ class WishContainer extends React.Component {
   render() {
     return (
       <div>
-        <WishList />
+        <WishList wish={this.props.wish} />
       </div>
     );
   }
 }
-export default connect()(WishContainer);
+const mapStateToProps = state => {
+  console.log("mapstate", state);
+  return {
+    wish: state.wish
+  };
+};
+export default connect(mapStateToProps)(WishContainer);
