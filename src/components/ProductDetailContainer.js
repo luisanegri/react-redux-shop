@@ -10,7 +10,9 @@ class ProductDetailContainer extends React.Component {
     const productId = this.props.match.params.id;
     console.log('product id?', productId);
     this.props.getProductDetail(productId);
-    this.props.addToCart();
+    // we dont want to add something to the cart immediately!
+    //only if the button is clicked!
+    //this.props.addToCart();
   }
 
   addToCart = () => {
@@ -36,7 +38,6 @@ class ProductDetailContainer extends React.Component {
           product={this.props.product}
           addToCart={this.props.addToCart}
         />
-        <Cart />
       </div>
     );
   }
@@ -49,8 +50,7 @@ class ProductDetailContainer extends React.Component {
 const mapStateToProps = state => {
   console.log('mapstate', state);
   return {
-    product: state.productDetail,
-    cart: state.cart
+    product: state.productDetail
   };
 };
 
