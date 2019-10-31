@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Cart(props) {
-  console.log('Cart. props are you there?', props);
+  console.log("Cart. props are you there?", props);
   return (
     <div>
       <div className="container-fluid container-product">
@@ -41,6 +41,7 @@ export default function Cart(props) {
                       </button>
                     </th>
                     <td>€ {item.price}</td>
+                    <img src={item.imageUrl} key={item.id} alt={item.name} />
                   </tr>
                 ))}
               </tbody>
