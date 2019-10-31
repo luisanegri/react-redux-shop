@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.right-col .btn-add-cart {
+.right-col .btn-add-cart,
+.right-col .btn-add-wish {
   /* position: absolute; */
   /* bottom: 0; */
   display: block;
@@ -15,21 +16,24 @@ body {
   border-color: black;
   left: 50%;
   transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.right-col .btn-add-cart:first-child {
+.right-col .btn-add-cart {
   position: absolute;
-  bottom: 50px;
+  bottom: 50px !important;
   /* right: 0; */
 }
 
-.right-col .btn-add-cart:nth-child(2) {
+.right-col .btn-add-wish {
   position: absolute;
-  bottom: 0px;
+  bottom: 0px !important;
   /* right: 0; */
 }
 
-.right-col .btn-add-cart:hover {
+.right-col .btn-add-cart:hover,
+.right-col .btn-add-wish:hover {
   border-color: black;
   background-color: black;
   color: white;
@@ -95,5 +99,31 @@ body {
   padding: 20px;
 }
 
-.detail-product {
+.col-right-cart .btn-delete,
+.col-left-cart .btn-delete {
+  padding: 0;
+  color: black;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.btn-delete span i {
+  font-size: 11px;
+}
+
+.btn-delete span {
+  margin-right: 4px;
+}
+
+.col-right-cart {
+  margin-top: 50px;
+}
+
+th,
+td {
+  font-size: 14px;
+}
+
+tbody th {
+  font-weight: normal;
 }
