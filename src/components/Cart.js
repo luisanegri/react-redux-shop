@@ -22,6 +22,9 @@ export default function Cart(props) {
                 <tr>
                   <th scope="col">Product</th>
                   <th scope="col">Ref.</th>
+                  <th scope="col" className="qty">
+                    Qty.
+                  </th>
                   <th scope="col"></th>
                   <th scope="col">Price</th>
                 </tr>
@@ -31,6 +34,27 @@ export default function Cart(props) {
                   <tr>
                     <th scope="row">{item.name}</th>
                     <td>87320</td>
+                    <th scope="row" className="qty">
+                      <span>
+                        <button
+                          type="button"
+                          className="btn btn-lg btn-checkout"
+                          onClick={() => props.increment(item.id)}
+                        >
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      </span>
+                      <span>{item.quantity}</span>
+                      <span>
+                        <button
+                          type="button"
+                          className="btn btn-lg btn-checkout"
+                          onClick={() => props.increment(item.id)}
+                        >
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      </span>
+                    </th>
                     <th scope="row">
                       <button
                         type="button"
@@ -45,9 +69,6 @@ export default function Cart(props) {
                 ))}
               </tbody>
             </table>
-            {/* {props.cart.map(item => (
-              <h4>{item.name}</h4>
-            ))} */}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Quicksand:400,500,600&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -18,6 +18,14 @@ body {
   transform: translateX(-50%);
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.btn-checkout {
+  width: 6px;
+  padding: 7px;
+  font-size: 12px;
+  position: relative;
+  background: red;
 }
 
 .right-col .btn-add-cart {
@@ -43,6 +51,7 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 0 40px !important;
+  margin-top: 100px;
 }
 .container-product h1 {
   text-align: center;
@@ -50,7 +59,10 @@ body {
 }
 
 .right-col h4 {
-  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .btn-add-cart i {
@@ -62,11 +74,11 @@ body {
 }
 
 .price-num {
-  font-weight: bold;
+  font-size: 15px;
 }
 
 .col-left img {
-  width: 100%;
+  width: 90%;
 }
 
 .col-left {
@@ -126,4 +138,71 @@ td {
 
 tbody th {
   font-weight: normal;
+}
+
+.product-list img {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product-list {
+  width: 300px;
+}
+
+.product-list-component h4 {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.col-mb {
+  margin-bottom: 40px;
+}
+
+.col-mb .card-title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.75rem;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0.67227rem;
+  color: #424242;
+}
+
+.product-list a:hover {
+  text-decoration: none;
+}
+
+.col-mb .product-list {
+  border: none;
+}
+
+.extra-info span:nth-child(2) {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.st-info {
+  margin-top: 36px;
+}
+
+.nav-brand-custom span i {
+  font-size: 9px;
+  margin-left: -4px;
+}
+
+.btn-checkout i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2px;
+  font-size: 13px;
+}
+
+.qty {
+  text-align: center;
 }
