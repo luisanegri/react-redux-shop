@@ -13,8 +13,6 @@ export default function ProductDetail(props) {
               thumbnail={props.product.imageUrl}
               image={props.product.imageUrl}
             />
-
-            {/* <img src={props.product.imageUrl} alt="product"></img> */}
           </div>
           <div className="col-md-6 right-col">
             <div className="body">
@@ -31,12 +29,15 @@ export default function ProductDetail(props) {
               </div>
 
               <div className="btn-wrapper">
-                <button type="button" className="btn btn-lg btn-add-cart">
+                <button
+                  type="button"
+                  className="btn btn-lg btn-add-cart"
+                  onClick={() => props.addToCart(props.product)}
+                >
                   Add to cart
                 </button>
                 <button type="button" className="btn btn-lg btn-add-cart">
                   Add to wishlist
-                  {/* <i class="fa fa-heart" aria-hidden="true"></i> */}
                 </button>
               </div>
             </div>
