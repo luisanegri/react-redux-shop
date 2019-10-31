@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductDetail(props) {
-  console.log('props are you there?', props);
+  console.log("props are you there?", props);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,7 +29,7 @@ export default function ProductDetail(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link link-custom" to="">
+              <Link className="nav-link link-custom" to="/wishlist">
                 Wishlist
                 <i className="fa fa-heart"></i>
               </Link>
