@@ -14,7 +14,7 @@ class ProductDetailContainer extends React.Component {
     // we dont want to add something to the cart immediately!
     //only if the button is clicked!
     //this.props.addToCart();
-    this.props.addToCart();
+    // this.props.addToCart();
     // this.props.addWish();
   }
 
