@@ -1,16 +1,14 @@
-
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import { getProductDetail } from '../actions/product-detail';
 import { addToCart } from '../actions/cart';
-import { addWish } from "../actions/wish";
-
+import { addWish } from '../actions/wish';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
-    console.log("product id?", productId);
+    console.log('product id?', productId);
     this.props.getProductDetail(productId);
 
     // we dont want to add something to the cart immediately!
@@ -18,7 +16,6 @@ class ProductDetailContainer extends React.Component {
     //this.props.addToCart();
     this.props.addToCart();
     // this.props.addWish();
-
   }
 
   addToCart = () => {
@@ -35,9 +32,9 @@ class ProductDetailContainer extends React.Component {
   };
 
   render() {
-    console.log("AM I RENDERED", this.props);
+    console.log('AM I RENDERED', this.props);
 
-    if (!this.props.product.name) return "Loading";
+    if (!this.props.product.name) return 'Loading';
     return (
       <div>
         <ProductDetail
@@ -55,9 +52,9 @@ class ProductDetailContainer extends React.Component {
 // We define a function mapStateToProps that defines what part of the state
 // (from the redux store) is required as data in this component.
 const mapStateToProps = state => {
-  console.log("mapstate", state);
+  console.log('mapstate', state);
   return {
-    product: state.productDetail
+    product: state.productDetail,
     cart: state.cart,
     wish: state.wish
   };

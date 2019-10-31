@@ -45,9 +45,6 @@ export default function Cart(props) {
                 ))}
               </tbody>
             </table>
-            {/* {props.cart.map(item => (
-              <h4>{item.name}</h4>
-            ))} */}
           </div>
         </div>
       </div>
