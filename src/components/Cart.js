@@ -39,9 +39,9 @@ export default function Cart(props) {
                         <button
                           type="button"
                           className="btn btn-lg btn-checkout"
-                          onClick={() => props.increment(item.id)}
+                          onClick={() => props.decrement(item.id)}
                         >
-                          <i class="fa fa-plus"></i>
+                          <i class="fa fa-minus"></i>
                         </button>
                       </span>
                       <span>{item.quantity}</span>

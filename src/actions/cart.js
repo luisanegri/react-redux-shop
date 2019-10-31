@@ -1,6 +1,7 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
 
 export function addToCart(product, id, quantity) {
   return {
@@ -21,6 +22,17 @@ export const increment = (id, val) => {
   console.log('quantity?', id, val);
   return {
     type: 'INCREMENT',
+    payload: {
+      quantity: val,
+      id: id
+    }
+  };
+};
+
+export const decrement = (id, val) => {
+  console.log('quantity?', id, val);
+  return {
+    type: 'DECREMENT',
     payload: {
       quantity: val,
       id: id
