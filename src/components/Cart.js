@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
   console.log('Cart. props are you there?', props);
@@ -29,8 +29,7 @@ export default function Cart(props) {
   }
   console.log('is not empty test');
 
-
-  console.log("Cart. props are you there?", props);
+  console.log('Cart. props are you there?', props);
 
   return (
     <div>
@@ -61,7 +60,8 @@ export default function Cart(props) {
               <tbody>
                 {props.cart.map(item => (
                   <tr>
-                    <th scope="row"><img src={item.imageUrl} key={item.id} alt={item.name} />{item.name}</th>
+                    {/* <img src={item.imageUrl} key={item.id} alt={item.name} /> */}
+                    <th scope="row">{item.name}</th>
                     <td>87320</td>
                     <th scope="row" className="qty">
                       <span>
