@@ -1,7 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import ProductsList from './ProductsList';
-import { getProducts } from '../actions/products';
+import React from "react";
+import { connect } from "react-redux";
+import ProductsList from "./ProductsList";
+import { getProducts } from "../actions/products";
+import SearchForm from "./SearchForm";
+import searchProducts from "../actions/searchProducts";
 
 class ProductsContainer extends React.Component {
   componentDidMount() {
@@ -14,7 +16,14 @@ class ProductsContainer extends React.Component {
     } else {
       return (
         <div>
-          <ProductsList products={this.props.products} />
+          <SearchForm
+            products={this.props.products}
+            searchProducts={this.props.searchProducts}
+          />
+          <ProductsList
+            products={this.props.products}
+            search={this.props.search}
+          />
         </div>
       );
     }
@@ -22,12 +31,13 @@ class ProductsContainer extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    products: state.products
+    products: state.products,
+    search: state.search
   };
 };
 // If we bind action creators using connect,
 // this.props.dispatch is no longer available.
 export default connect(
   mapStateToProps,
-  { getProducts }
+  { getProducts, searchProducts }
 )(ProductsContainer);

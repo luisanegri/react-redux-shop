@@ -3,12 +3,12 @@ import products from "./products";
 import productDetail from "./productDetail";
 import cart from "./cart";
 import wish from "./wish";
-// import search from "./search";
+import search from "./searchProducts";
 
 export default combineReducers({
   products,
   productDetail,
   cart,
-  wish
-  // search
+  wish,
+  search
 });
