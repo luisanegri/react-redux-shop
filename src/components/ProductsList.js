@@ -5,13 +5,7 @@ export default function ProductList(props) {
   return (
     <div>
       <h1>All products</h1>
-      {/* <p>There are {props.products.length} products available.</p> */}
 
-      {/* <ul>
-        {props.products.map(product => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul> */}
       <div className="container">
         <div class="row">
           {props.products.map(product => (
