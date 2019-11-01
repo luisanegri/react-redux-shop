@@ -1,24 +1,23 @@
 // import React, { Component } from "react";
 // import NavBar from "./NavBar";
+// import { connect } from "react-redux";
 
 // export class NavbarContainer extends Component {
 //   render() {
 //     return (
 //       <div>
 //         <NavBar products={this.props.products} />;
-//         <div>
-//           <form onSubmit={this.handleSubmit}>
-//             <label>
-//               SEARCH
-//               <input
-//                 type="text"
-//                 value={this.state.value}
-//                 onChange={this.handleChange}
-//               ></input>
-//             </label>
-//             <input type="Submit" />
-//           </form>
-//         </div>
+//         <form onSubmit={this.handleSubmit}>
+//           <label>
+//             SEARCH
+//             <input
+//               type="text"
+//               value={this.value}
+//               onChange={this.handleChange}
+//             ></input>
+//           </label>
+//           <input type="Submit" />
+//         </form>
 //       </div>
 //     );
 //   }
@@ -29,7 +28,8 @@
 //     products: state.products
 //   };
 // };
+
 // export default connect(
-//   mapStateToProps,
-//   { getProducts }
+//   null,
+//   mapStateToProps
 // )(NavBarContainer);

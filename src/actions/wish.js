@@ -7,3 +7,11 @@ export function addWish(product, id) {
     }
   };
 }
+
+export const deleteFromWishList = id => {
+  console.log("id????????", id);
+  return {
+    type: "REMOVE_FROM_WISH_LIST",
+    payload: id
+  };
+};
