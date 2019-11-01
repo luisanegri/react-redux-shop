@@ -1,7 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Quicksand:400,500,600&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  position: relative;
+}
+
+.App {
+  padding-bottom: 80px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
 }
 
 .right-col .btn-add-cart,
@@ -18,6 +40,14 @@ body {
   transform: translateX(-50%);
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.btn-checkout {
+  width: 6px;
+  padding: 7px;
+  font-size: 12px;
+  position: relative;
+  background: red;
 }
 
 .right-col .btn-add-cart {
@@ -43,6 +73,7 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 0 40px !important;
+  margin-top: 100px;
 }
 .container-product h1 {
   text-align: center;
@@ -50,7 +81,10 @@ body {
 }
 
 .right-col h4 {
-  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .btn-add-cart i {
@@ -62,11 +96,13 @@ body {
 }
 
 .price-num {
-  font-weight: bold;
+  font-size: 15px;
 }
 
 .col-left img {
-  width: 100%;
+  width: 480px;
+  margin: 0 auto;
+  display: block;
 }
 
 .col-left {
@@ -126,4 +162,190 @@ td {
 
 tbody th {
   font-weight: normal;
+}
+
+.product-list img {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product-list {
+  width: 300px;
+}
+
+.product-list-component h4 {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.col-mb {
+  margin-bottom: 40px;
+}
+
+.col-mb .card-title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.75rem;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0.67227rem;
+  color: #424242;
+}
+
+.product-list a:hover {
+  text-decoration: none;
+}
+
+.col-mb .product-list {
+  border: none;
+}
+
+.extra-info span:nth-child(2) {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.st-info {
+  margin-top: 36px;
+}
+
+.nav-brand-custom span i {
+  font-size: 9px;
+  margin-left: -4px;
+}
+
+.btn-checkout i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2px;
+  font-size: 13px;
+}
+
+.qty {
+  text-align: center;
+}
+
+.btn {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.image-wrapper:hover .card-img-top {
+  opacity: 0.3;
+}
+
+.image-wrapper:hover .middle {
+  opacity: 1;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 13px 30px;
+  color: black;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.middle:hover {
+  background-color: black;
+  color: white;
+}
+
+.image-wrapper .card-img-top {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.vimeo {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.vimeo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-home {
+  padding: 0 !important;
+}
+
+section {
+  max-width: 57%;
+  margin: auto;
+  text-align: center;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-wrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #2d3e50;
+  position: absolute;
+  opacity: 0.7;
+}
+.landing-text {
+  z-index: 2;
+}
+.landing-text h1 {
+  font-weight: 600;
+  font-size: 380%;
+}
+.landing-text h3 {
+  font-size: 230%;
+  font-weight: 400;
+  margin-top: -4%;
+  padding-bottom: 3%;
+}
+.btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 140%;
+  background: #2a80b9;
+  padding: 2% 3%;
+  border-radius: 5px;
 }

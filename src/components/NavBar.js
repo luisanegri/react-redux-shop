@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavBar(props) {
-  console.log("props are you there?", props);
+
   return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">

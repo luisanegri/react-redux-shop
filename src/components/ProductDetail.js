@@ -17,15 +17,28 @@ export default function ProductDetail(props) {
           <div className="col-md-6 right-col">
             <div className="body">
               <h4>{props.product.name}</h4>
+              <div className="detail-product">
+                <span className="price-num">€{props.product.price}</span>
+              </div>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
                 vitae dicta sunt explicabo
               </p>
-              <div className="detail-product">
-                <span className="price-num">€{props.product.price}</span>
-                <span className="shipping">Ships for free</span>
+              <div className="st-info">
+                <div className="extra-info">
+                  <span>
+                    <i class="fa fa-check"></i>
+                  </span>
+                  <span>Order before tomorrow 15:00 to receive tomorrow.</span>
+                </div>
+                <div className="extra-info">
+                  <span>
+                    <i class="fa fa-check"></i>
+                  </span>
+                  <span>Worldwide shipping.</span>
+                </div>
               </div>
 
               <div className="btn-wrapper">
