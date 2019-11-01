@@ -13,6 +13,8 @@ class SearchForm extends React.Component {
 
   handleSubmit = event => {
     console.log(this.state.value, "wat is dit????");
+    console.log(this.state.value, "wat is dit?");
+
     event.preventDefault();
 
     this.props.searchProducts(this.state.value, this.props.products);
