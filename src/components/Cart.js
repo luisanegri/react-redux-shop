@@ -3,13 +3,39 @@ import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
   console.log('Cart. props are you there?', props);
+  const totalPrice = props.cart
+    .map(item => item.price)
+    .reduce((acc, value) => {
+      return acc + value.quantity * value.price;
+    }, 0);
+  console.log('total price', totalPrice);
+  console.log('props test:', props);
+  const empty = !props.cart.length;
+  console.log('empty test:', empty);
+  if (empty) {
+    console.log('is empty test');
+    return (
+      <p
+        style={{
+          marginTop: '100px',
+          textAlign: 'center',
+          fontFamily: 'Quicksand',
+          fontWeight: 500
+        }}
+      >
+        Your bag is empty!
+      </p>
+    );
+  }
+  console.log('is not empty test');
+
   return (
     <div>
       <div className="container-fluid container-product">
         <div className="row">
           <div className="col-md-4 col-left-cart">
             <h5>Your bag</h5>
-            <Link to="/" class="btn btn-link btn-delete">
+            <Link to="/products" class="btn btn-link btn-delete">
               <span>
                 <i class="fa fa-chevron-left"></i>
               </span>
@@ -64,13 +90,16 @@ export default function Cart(props) {
                         Delete
                       </button>
                     </th>
-                    <td>€ {item.price}</td>
+                    <td>€ {item.price * item.quantity}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         </div>
+        <button className="btn" id="btn-checkout-cart">
+          Checkout
+        </button>
       </div>
     </div>
   );

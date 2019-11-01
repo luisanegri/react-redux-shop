@@ -1,21 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cart from './Cart';
-import { deleteFromCart, increment, decrement } from '../actions/cart';
+import { deleteFromCart, increment, decrement, total } from '../actions/cart';
 
 class CartContainer extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    total();
+  }
   render() {
     console.log('CART', this.props);
     return (
-      <div>
-        <Cart
-          cart={this.props.cart}
-          deleteFromCart={this.props.deleteFromCart}
-          increment={this.props.increment}
-          decrement={this.props.decrement}
-        />
-      </div>
+      // <div className="cart-wrapper" style={{ marginTop: '100px' }}>
+      <Cart
+        cart={this.props.cart}
+        deleteFromCart={this.props.deleteFromCart}
+        increment={this.props.increment}
+        decrement={this.props.decrement}
+        total={this.props.total}
+      />
+      // </div>
     );
   }
 }
@@ -23,7 +26,7 @@ class CartContainer extends React.Component {
 // We define a function mapStateToProps that defines what part of the state
 // (from the redux store) is required as data in this component.
 const mapStateToProps = state => {
-  console.log('mapstate', state);
+  console.log('CART CONTAINER?????????', state);
   return {
     cart: state.cart
   };
@@ -31,11 +34,10 @@ const mapStateToProps = state => {
 
 const mapActionsToProps = () => {
   return {
-    // getProductDetail: getProductDetail,
-    // addToCart: addToCart
     deleteFromCart: deleteFromCart,
     increment: increment,
-    decrement: decrement
+    decrement: decrement,
+    total: total
   };
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function NavBar(props) {
-  console.log('props are you there?', props);
+  console.log('NAVBAR', props);
   return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -27,8 +27,8 @@ export default function NavBar(props) {
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 navbar-nav-custom">
             <li className="nav-item active">
               <Link className="nav-link link-custom" to="/cart">
-                Cart
-                {/* {props.cart.quantity} */}
+                {props.cart.length}
+
                 <i className="fa fa-shopping-cart"></i>
               </Link>
             </li>
@@ -49,3 +49,5 @@ export default function NavBar(props) {
     </div>
   );
 }
+
+// [{props.cart.length && props.cart[0].quantity}]
