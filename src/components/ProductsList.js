@@ -7,7 +7,7 @@ export default function ProductList(props) {
       <h4>Products</h4>
       {/* <p>There are {props.products.length} products available.</p> */}
       <div className="container">
-        <div class="row">
+        <div className="row">
           {props.products.map(product => (
             <div class="col-md-4 col-mb">
               <div className="card product-list">
@@ -19,13 +19,13 @@ export default function ProductList(props) {
                     key={product.id}
                   />
                   <Link to={`/product/${product.id}`}>
-                    <div class="middle">
-                      <div class="text">View</div>
+                    <div className="middle">
+                      <div className="text">View</div>
                     </div>
                   </Link>
                 </div>
 
-                <h5 class="card-title">{product.name}</h5>
+                <h5 className="card-title">{product.name}</h5>
 
                 {/* <p className="card-text">{product.price} </p> */}
               </div>

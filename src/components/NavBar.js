@@ -9,7 +9,7 @@ export default function NavBar(props) {
         <Link className="navbar-brand nav-brand-custom" to="/">
           <span>Shop </span>
           <span>
-            <i class="fa fa-circle"></i>
+            <i className="fa fa-circle"></i>
           </span>
         </Link>
         <button
