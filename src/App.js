@@ -7,8 +7,9 @@ import ProductDetailContainer from './components/ProductDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import CartContainer from './components/CartContainer';
-import WishListContainer from "./components/WishListContainer";
-
+import WishListContainer from './components/WishListContainer';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -16,11 +17,13 @@ function App() {
       <NavBar />
       {/* <NavBarContainer /> */}
       <Switch>
-        <Route exact path="/" component={ProductsContainer}></Route>
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/products" component={ProductsContainer}></Route>
         <Route path="/product/:id" component={ProductDetailContainer}></Route>
         <Route path="/cart" component={CartContainer} />
         <Route path="/wishlist" component={WishListContainer}></Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

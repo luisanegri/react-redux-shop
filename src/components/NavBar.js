@@ -1,13 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function ProductDetail(props) {
-  console.log("props are you there?", props);
+export default function NavBar(props) {
+  console.log('props are you there?', props);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand nav-brand-custom" to="/">
-          Shop
+          <span>Shop </span>
+          <span>
+            <i class="fa fa-circle"></i>
+          </span>
         </Link>
         <button
           className="navbar-toggler"
@@ -25,6 +28,7 @@ export default function ProductDetail(props) {
             <li className="nav-item active">
               <Link className="nav-link link-custom" to="/cart">
                 Cart
+                {/* {props.cart.quantity} */}
                 <i className="fa fa-shopping-cart"></i>
               </Link>
             </li>
