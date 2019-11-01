@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import { connect } from 'react-redux';
@@ -21,3 +22,4 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(NavbarContainer);
+

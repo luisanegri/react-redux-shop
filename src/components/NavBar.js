@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function NavBar(props) {
-  console.log('NAVBAR', props);
   return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">

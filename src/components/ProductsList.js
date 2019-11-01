@@ -6,6 +6,7 @@ export default function ProductList(props) {
     <div className="product-list-component">
       <h4>Products</h4>
       {/* <p>There are {props.products.length} products available.</p> */}
+
       <div className="container">
         <div class="row">
           {props.products.map(product => (
