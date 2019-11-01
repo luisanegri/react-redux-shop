@@ -2,24 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Cart(props) {
-  console.log('Cart. props are you there?', props);
-  const totalPrice = props.cart
-    .map(item => item.price)
-    .reduce((acc, value) => {
-      return acc + value.quantity * value.price;
-    }, 0);
-  console.log('total price', totalPrice);
-  console.log('props test:', props);
+  console.log("Cart. props are you there?", props);
+  // const totalPrice = props.cart
+  //   .map(item => item.price)
+  //   .reduce((acc, value) => {
+  //     return acc + value.quantity * value.price;
+  //   }, 0);
+  // console.log("total price", totalPrice);
+  console.log("props test:", props);
   const empty = !props.cart.length;
-  console.log('empty test:', empty);
+  console.log("empty test:", empty);
   if (empty) {
-    console.log('is empty test');
+    console.log("is empty test");
     return (
       <p
         style={{
-          marginTop: '100px',
-          textAlign: 'center',
-          fontFamily: 'Quicksand',
+          marginTop: "100px",
+          textAlign: "center",
+          fontFamily: "Quicksand",
           fontWeight: 500
         }}
       >
@@ -27,8 +27,7 @@ export default function Cart(props) {
       </p>
     );
   }
-  console.log('is not empty test');
-
+  console.log("is not empty test");
 
   console.log("Cart. props are you there?", props);
 
@@ -61,7 +60,10 @@ export default function Cart(props) {
               <tbody>
                 {props.cart.map(item => (
                   <tr>
-                    <th scope="row"><img src={item.imageUrl} key={item.id} alt={item.name} />{item.name}</th>
+                    <th scope="row">
+                      {/* <img src={item.imageUrl} key={item.id} alt={item.name} /> */}
+                      {item.name}
+                    </th>
                     <td>87320</td>
                     <th scope="row" className="qty">
                       <span>
