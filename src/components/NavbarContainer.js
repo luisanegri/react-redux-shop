@@ -1,35 +1,25 @@
-// import React, { Component } from "react";
-// import NavBar from "./NavBar";
 
-// export class NavbarContainer extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <NavBar products={this.props.products} />;
-//         <div>
-//           <form onSubmit={this.handleSubmit}>
-//             <label>
-//               SEARCH
-//               <input
-//                 type="text"
-//                 value={this.state.value}
-//                 onChange={this.handleChange}
-//               ></input>
-//             </label>
-//             <input type="Submit" />
-//           </form>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+import React, { Component } from 'react';
+import NavBar from './NavBar';
+import { connect } from 'react-redux';
 
-// const mapStateToProps = state => {
-//   return {
-//     products: state.products
-//   };
-// };
-// export default connect(
-//   mapStateToProps,
-//   { getProducts }
-// )(NavBarContainer);
+class NavbarContainer extends Component {
+  render() {
+    console.log('NavbarContainer render test!');
+    return (
+      <div>
+        <NavBar cart={this.props.cart} />;
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  console.log('mapstate NAVCONTAINER', state);
+  return {
+    cart: state.cart
+  };
+};
+
+export default connect(mapStateToProps)(NavbarContainer);
+

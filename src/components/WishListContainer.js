@@ -1,6 +1,7 @@
 import React from "react";
 import WishList from "./WishList";
 import { connect } from "react-redux";
+import { deleteFromWishList } from "../actions/wish";
 
 class WishContainer extends React.Component {
   render() {
@@ -18,7 +19,7 @@ const mapStateToProps = state => {
   console.log("mapstate", state);
   return {
     wish: state.wish,
-    deleteFromWishList: state.deleteFromWishList
+    deleteFromWishList: deleteFromWishList
   };
 };
 export default connect(mapStateToProps)(WishContainer);

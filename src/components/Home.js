@@ -1,9 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Footer(props) {
+export default function Home() {
   return (
     <div>
-      <div className="container-fluid container-home"></div>
+      <div className="home-image">
+        <div class="hero-text">
+          <Link to="/products">
+            <button type="button" className="btn btn-lg btn-home">
+              Shop
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
