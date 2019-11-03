@@ -2,24 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
-  console.log("Cart. props are you there?", props);
+  console.log('Cart. props are you there?', props);
   // const totalPrice = props.cart
   //   .map(item => item.price)
   //   .reduce((acc, value) => {
   //     return acc + value.quantity * value.price;
   //   }, 0);
   // console.log("total price", totalPrice);
-  console.log("props test:", props);
+  console.log('props test:', props);
   const empty = !props.cart.length;
-  console.log("empty test:", empty);
+  console.log('empty test:', empty);
   if (empty) {
-    console.log("is empty test");
+    console.log('is empty test');
     return (
       <p
         style={{
-          marginTop: "100px",
-          textAlign: "center",
-          fontFamily: "Quicksand",
+          marginTop: '100px',
+          textAlign: 'center',
+          fontFamily: 'Quicksand',
           fontWeight: 500
         }}
       >
@@ -27,15 +27,12 @@ export default function Cart(props) {
       </p>
     );
   }
-<<<<<<< HEAD
   console.log('is not empty test');
 
   console.log('Cart. props are you there?', props);
-=======
-  console.log("is not empty test");
+  console.log('is not empty test');
 
-  console.log("Cart. props are you there?", props);
->>>>>>> c189208e57a3aee487ced44419c625aca3d53fbe
+  console.log('Cart. props are you there?', props);
 
   return (
     <div>
@@ -66,15 +63,9 @@ export default function Cart(props) {
               <tbody>
                 {props.cart.map(item => (
                   <tr>
-<<<<<<< HEAD
                     {/* <img src={item.imageUrl} key={item.id} alt={item.name} /> */}
                     <th scope="row">{item.name}</th>
-=======
-                    <th scope="row">
-                      {/* <img src={item.imageUrl} key={item.id} alt={item.name} /> */}
-                      {item.name}
-                    </th>
->>>>>>> c189208e57a3aee487ced44419c625aca3d53fbe
+
                     <td>87320</td>
                     <th scope="row" className="qty">
                       <span>
