@@ -29,7 +29,7 @@ export default function NavBar(props) {
                 Products
               </Link>
             </li>
-            <li className="nav-item active">
+            <li className="nav-item">
               <Link className="nav-link link-custom" to="/cart">
                 {props.cart.length}
 
