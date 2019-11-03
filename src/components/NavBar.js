@@ -25,6 +25,11 @@ export default function NavBar(props) {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 navbar-nav-custom">
             <li className="nav-item active">
+              <Link className="nav-link link-custom" to="/products">
+                Products
+              </Link>
+            </li>
+            <li className="nav-item active">
               <Link className="nav-link link-custom" to="/cart">
                 {props.cart.length}
 

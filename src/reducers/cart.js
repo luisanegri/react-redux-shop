@@ -16,7 +16,6 @@ const reducer = (state = [], action = {}) => {
       return [...state, product];
     case 'REMOVE_FROM_CART':
       console.log('action being called?', action.payload);
-
       return state.filter(product => product.id !== action.payload);
     case 'INCREMENT':
       const newArr1 = state.map(product => {
