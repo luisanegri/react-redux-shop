@@ -2,21 +2,29 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import { getProductDetail } from '../actions/product-detail';
+import { addToCart } from '../actions/cart';
+import { addWish } from '../actions/wish';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
-    // call function here!
+    console.log('product id?', productId);
     this.props.getProductDetail(productId);
+
+    // we dont want to add something to the cart immediately!
+    //only if the button is clicked!
+    //this.props.addToCart();
+    // this.props.addToCart();
+    // this.props.addWish();
   }
 
   addToCart = () => {
     // this.props.addToCart(this.props.product)
-    // 1. cart reducer with initial state
-    // 2. addToCart actioncreator (function that creates an action with type payload)
-    // 3. Import addToCart here and pass it to connect
-    // 4. make a button
-    // 5. Add event listener to that that calls this.props.addTocart (our action creator)
+    // 1. cart reducer with initial state ok
+    // 2. addToCart actioncreator (function that creates an action with type payload) ok
+    // 3. Import addToCart here and pass it to connect ok
+    // 4. make a button ok
+    // 5. Add event listener to that that calls this.props.addTocart (our action creator) -- STOPPED HERE
     // 6. Check if dispatches an action in redux devtools
     // 7. Handle action in reducer to add the product to your cart
     // 8. Check redux devtools if it is successfull
@@ -27,7 +35,15 @@ class ProductDetailContainer extends React.Component {
     console.log('AM I RENDERED', this.props);
 
     if (!this.props.product.name) return 'Loading';
-    return <ProductDetail product={this.props.product} />;
+    return (
+      <div>
+        <ProductDetail
+          product={this.props.product}
+          addToCart={this.props.addToCart}
+          addWish={this.props.addWish}
+        />
+      </div>
+    );
   }
 }
 
@@ -38,7 +54,17 @@ class ProductDetailContainer extends React.Component {
 const mapStateToProps = state => {
   console.log('mapstate', state);
   return {
-    product: state.productDetail
+    product: state.productDetail,
+    cart: state.cart,
+    wish: state.wish
+  };
+};
+
+const mapActionsToProps = () => {
+  return {
+    getProductDetail: getProductDetail,
+    addToCart: addToCart,
+    addWish: addWish
   };
 };
 
@@ -46,5 +72,25 @@ const mapStateToProps = state => {
 // by the reducers (like store.subscribe)
 export default connect(
   mapStateToProps,
-  { getProductDetail }
+  mapActionsToProps()
 )(ProductDetailContainer);
+
+// var reduxStore = {
+//   productDetail: {
+//     name: 'Product 1'
+//     id: 1
+//   },
+//   cart: []
+// }
+
+// addToCart
+
+// <ProductDetailContainer
+//   product={state.productDetail}
+//   cart={state.cart}
+//   addToCart={addToCart}
+// />
+
+// this.props.product
+// this.props.cart
+// this.props.addToCart()

@@ -11,7 +11,7 @@ export function setProducts(products) {
 export function getProducts() {
   return function(dispatch) {
     // dispatch({ type: "APP_LOADING" });
-    fetch("http://localhost:4000/products")
+    fetch("http://localhost:3010/products")
       .then(res => res.json())
       .then(products => {
         console.log(products, "WAAAAA");
