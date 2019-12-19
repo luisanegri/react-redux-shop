@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-redux-shop/static/css/main.a3cb2b12.chunk.css",
+    "main.js": "/react-redux-shop/static/js/main.7e81c484.chunk.js",
+    "main.js.map": "/react-redux-shop/static/js/main.7e81c484.chunk.js.map",
+    "runtime-main.js": "/react-redux-shop/static/js/runtime-main.8af70863.js",
+    "runtime-main.js.map": "/react-redux-shop/static/js/runtime-main.8af70863.js.map",
+    "static/css/2.c36072e5.chunk.css": "/react-redux-shop/static/css/2.c36072e5.chunk.css",
+    "static/js/2.527c48b3.chunk.js": "/react-redux-shop/static/js/2.527c48b3.chunk.js",
+    "static/js/2.527c48b3.chunk.js.map": "/react-redux-shop/static/js/2.527c48b3.chunk.js.map",
+    "index.html": "/react-redux-shop/index.html",
+    "precache-manifest.f65cea80befaf7998ae85d25c9e79840.js": "/react-redux-shop/precache-manifest.f65cea80befaf7998ae85d25c9e79840.js",
+    "service-worker.js": "/react-redux-shop/service-worker.js",
+    "static/css/2.c36072e5.chunk.css.map": "/react-redux-shop/static/css/2.c36072e5.chunk.css.map",
+    "static/css/main.a3cb2b12.chunk.css.map": "/react-redux-shop/static/css/main.a3cb2b12.chunk.css.map",
+    "static/media/close.svg": "/react-redux-shop/static/media/close.123b7d37.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8af70863.js",
+    "static/css/2.c36072e5.chunk.css",
+    "static/js/2.527c48b3.chunk.js",
+    "static/css/main.a3cb2b12.chunk.css",
+    "static/js/main.7e81c484.chunk.js"
+  ]
+}
