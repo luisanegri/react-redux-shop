@@ -8,7 +8,6 @@ export default function ProductList(props) {
     <div className="product-list-component">
       <h4>Products</h4>
       {/* <p>There are {props.products.length} products available.</p> */}
-
       <div className="container">
         <div class="row">
           {products.map(product => (
@@ -27,10 +26,7 @@ export default function ProductList(props) {
                     </div>
                   </Link>
                 </div>
-
                 <h5 className="card-title">{product.name}</h5>
-
-                {/* <p className="card-text">{product.price} </p> */}
               </div>
             </div>
           ))}

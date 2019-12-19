@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function Footer(props) {
-  console.log('props are you there?', props);
+export default function Footer() {
   return (
     <div>
       <footer className="page-footer font-small bg-light">

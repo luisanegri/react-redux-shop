@@ -10,7 +10,6 @@ class CartContainer extends React.Component {
   render() {
     console.log('CART', this.props);
     return (
-      // <div className="cart-wrapper" style={{ marginTop: '100px' }}>
       <Cart
         cart={this.props.cart}
         deleteFromCart={this.props.deleteFromCart}
@@ -18,7 +17,6 @@ class CartContainer extends React.Component {
         decrement={this.props.decrement}
         total={this.props.total}
       />
-      // </div>
     );
   }
 }
@@ -26,7 +24,6 @@ class CartContainer extends React.Component {
 // We define a function mapStateToProps that defines what part of the state
 // (from the redux store) is required as data in this component.
 const mapStateToProps = state => {
-  console.log('CART CONTAINER?????????', state);
   return {
     cart: state.cart
   };

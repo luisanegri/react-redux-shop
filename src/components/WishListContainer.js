@@ -1,7 +1,7 @@
-import React from "react";
-import WishList from "./WishList";
-import { connect } from "react-redux";
-import { deleteFromWishList } from "../actions/wish";
+import React from 'react';
+import WishList from './WishList';
+import { connect } from 'react-redux';
+import { deleteFromWishList } from '../actions/wish';
 
 class WishContainer extends React.Component {
   render() {
@@ -16,7 +16,6 @@ class WishContainer extends React.Component {
   }
 }
 const mapStateToProps = state => {
-  console.log("mapstate", state);
   return {
     wish: state.wish,
     deleteFromWishList: deleteFromWishList

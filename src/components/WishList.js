@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function WishList(props) {
   return (
@@ -45,9 +45,6 @@ export default function WishList(props) {
                 ))}
               </tbody>
             </table>
-            {/* {props.cart.map(item => (
-              <h4>{item.name}</h4>
-            ))} */}
           </div>
         </div>
       </div>

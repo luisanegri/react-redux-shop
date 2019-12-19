@@ -8,12 +8,9 @@ export default function Cart(props) {
   //   .reduce((acc, value) => {
   //     return acc + value.quantity * value.price;
   //   }, 0);
-  // console.log("total price", totalPrice);
-  console.log('props test:', props);
+  // console.log('total price?????????????/', totalPrice);
   const empty = !props.cart.length;
-  console.log('empty test:', empty);
   if (empty) {
-    console.log('is empty test');
     return (
       <p
         style={{
@@ -27,13 +24,6 @@ export default function Cart(props) {
       </p>
     );
   }
-  console.log('is not empty test');
-
-  console.log('Cart. props are you there?', props);
-  console.log('is not empty test');
-
-  console.log('Cart. props are you there?', props);
-
   return (
     <div>
       <div className="container-fluid container-product">

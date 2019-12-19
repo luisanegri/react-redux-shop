@@ -1,5 +1,4 @@
 const reducer = (state = [], action = {}) => {
-  console.log('state???????????????????????????????', state);
   switch (action.type) {
     case 'ADD_TO_CART':
       const product = { ...action.payload, quantity: 1 };
@@ -36,13 +35,15 @@ const reducer = (state = [], action = {}) => {
       });
       return newArr2;
     case 'TOTAL':
-      return this.products.reduce((acc, value) => {
-        return acc + value.quantity * value.price;
-      }, 0);
-
+      const newArr3 = state
+        .map(item => item.id)
+        .reduce((total, value) => {
+          return total + value.quantity * value.price;
+        }, 0);
+      console.log('TOTAL', newArr3);
+      return newArr3;
     default:
       return state;
   }
 };
-
 export default reducer;

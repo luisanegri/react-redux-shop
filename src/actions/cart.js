@@ -12,7 +12,6 @@ export function addToCart(product) {
 }
 
 export const deleteFromCart = id => {
-  console.log('id????????', id);
   return {
     type: 'REMOVE_FROM_CART',
     payload: id
@@ -20,7 +19,6 @@ export const deleteFromCart = id => {
 };
 
 export const increment = (id, val) => {
-  console.log('quantity?', id, val);
   return {
     type: 'INCREMENT',
     payload: {
@@ -31,7 +29,7 @@ export const increment = (id, val) => {
 };
 
 export const decrement = (id, val) => {
-  console.log('quantity?', id, val);
+  console.log('decrement quantity?', id, val);
   return {
     type: 'DECREMENT',
     payload: {
@@ -41,25 +39,13 @@ export const decrement = (id, val) => {
   };
 };
 
-export const total = (quantity, price, id, total) => {
+export const total = (quantity, price) => {
   return {
     type: 'TOTAL',
     payload: {
       quantity,
       price,
-      id,
-      total: quantity * price
+      total
     }
   };
 };
-
-// export const calculateTotal = (quantity, ) => {
-//   console.log('quantity?', id, val);
-//   return {
-//     type: 'DECREMENT',
-//     payload: {
-//       quantity: val,
-//       id: id
-//     }
-//   };
-// };
