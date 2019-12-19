@@ -409,3 +409,7 @@ section {
   margin-top: 30px;
   font-size: 14px;
 }
+
+.btn {
+  background: unset !important;
+}
