@@ -29,7 +29,6 @@ export const increment = (id, val) => {
 };
 
 export const decrement = (id, val) => {
-  console.log('decrement quantity?', id, val);
   return {
     type: 'DECREMENT',
     payload: {

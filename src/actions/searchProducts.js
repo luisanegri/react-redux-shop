@@ -1,4 +1,4 @@
-export const SEARCH = "SEARCH";
+export const SEARCH = 'SEARCH';
 
 export default function searchProducts(query, products) {
   return {
@@ -6,4 +6,3 @@ export default function searchProducts(query, products) {
     payload: { query, products }
   };
 }
-// action is not being fired need dispatch?
