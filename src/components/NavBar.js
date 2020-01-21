@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../node_modules/jquery/dist/jquery.min.js';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 export default function NavBar(props) {
   return (
