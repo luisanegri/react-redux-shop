@@ -28,8 +28,6 @@ body {
 
 .right-col .btn-add-cart,
 .right-col .btn-add-wish {
-  /* position: absolute; */
-  /* bottom: 0; */
   display: block;
   width: 50%;
   border-radius: 0;
@@ -52,29 +50,10 @@ body {
   background: red;
 }
 
-/* .right-col .btn-add-cart {
-  position: absolute;
-  bottom: 50px !important;
-}
-*/
-
-/* .right-col .btn-add-wish {
-  position: absolute;
-  bottom: 0px !important;
-} */
-
 .right-col .btn-add-wish,
 .right-col .btn-add-cart {
   margin: 0 auto;
 }
-
-/* not working */
-/* .right-col .btn-add-cart:hover,
-.right-col .btn-add-wish:hover {
-  border-color: black;
-  background-color: black;
-  color: white;
-} */
 
 .container-product {
   margin-top: 30px;
