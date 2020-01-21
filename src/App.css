@@ -358,7 +358,7 @@ section {
 .home-image {
   display: block;
   position: absolute;
-  background: url('https://d2jv9003bew7ag.cloudfront.net/uploads/Margaret-Bourke-White-WOR-radio-transmitting-tower-1935.jpg');
+  background-image: url('https://d2jv9003bew7ag.cloudfront.net/uploads/Margaret-Bourke-White-WOR-radio-transmitting-tower-1935.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -437,26 +437,12 @@ section {
   margin: 0 10px;
 }
 
-/* remove */
-/* .col-mb .product-list {
-  border: 1px solid;
-  padding: 40px 20px 27px;
-} */
-
-/* just for now */
-/* .thumbnail {
-  border: 1px solid;
-  padding: 177px;
-} */
-
 .btn-wrapper {
   text-align: center;
-  /* probablywill need to change */
   margin-top: 30px;
 }
-/* 767 */
 
-/* up until 500px */
+/* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {
   .wrapper-cart .container-product {
@@ -481,18 +467,4 @@ section {
   .react-fancybox .thumbnail img {
     width: 100%;
   }
-}
-
-.animated-up:hover,
-.animated-down:hover {
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  -o-transition: -o-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out,
-    -o-transform 0.2s ease-in-out;
-  -webkit-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-  display: inline-block;
 }
