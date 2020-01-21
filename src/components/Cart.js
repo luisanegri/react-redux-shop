@@ -49,25 +49,27 @@ export default function Cart(props) {
                     <th scope="row">{item.name}</th>
                     <td>87320</td>
                     <th scope="row" className="qty">
-                      <span>
-                        <button
-                          type="button"
-                          className="btn btn-lg btn-checkout btn-rm-bg"
-                          onClick={() => props.decrement(item.id)}
-                        >
-                          <i class="fa fa-minus"></i>
-                        </button>
-                      </span>
-                      <span>{item.quantity}</span>
-                      <span>
-                        <button
-                          type="button"
-                          className="btn btn-lg btn-checkout btn-rm-bg"
-                          onClick={() => props.increment(item.id)}
-                        >
-                          <i class="fa fa-plus"></i>
-                        </button>
-                      </span>
+                      <div className="wrap-id">
+                        <span>
+                          <button
+                            type="button"
+                            className="btn btn-id btn-rm-bg"
+                            onClick={() => props.decrement(item.id)}
+                          >
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </span>
+                        <span>{item.quantity}</span>
+                        <span>
+                          <button
+                            type="button"
+                            className="btn btn-id btn-rm-bg"
+                            onClick={() => props.increment(item.id)}
+                          >
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </span>
+                      </div>
                     </th>
                     <th scope="row">
                       <button

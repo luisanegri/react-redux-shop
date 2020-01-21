@@ -204,13 +204,8 @@ tbody th {
   margin-left: -4px;
 }
 
-.btn-checkout i {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 2px;
+.btn-id i {
   font-size: 13px;
-  color: black;
 }
 
 .qty {
@@ -421,6 +416,14 @@ section {
 
 .btn-rm-bg {
   background: unset;
+}
+
+.btn-id {
+  color: black;
+}
+
+.wrap-id {
+  margin-top: -6px;
 }
 
 /* ------------- Media Queries ----------------- */
