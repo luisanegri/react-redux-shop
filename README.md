@@ -35,7 +35,7 @@ The user can search for products, view a list of products and details about each
 * The website was tested in different devices and adapted accordingly using media queries and bootstrap.
 * Manually tested each feature and component.
 
-# Install
+## Install
 
 1. Clone repository
 
