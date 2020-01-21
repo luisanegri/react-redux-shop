@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <div className="home-image">
-        <div class="hero-text">
+        <div className="hero-text">
           <Link to="/products">
             <button type="button" className="btn btn-lg btn-home">
               Shop

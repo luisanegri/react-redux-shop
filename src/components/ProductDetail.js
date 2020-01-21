@@ -8,13 +8,13 @@ export default function ProductDetail(props) {
     <div>
       <div className="container-fluid container-product">
         <div className="row">
-          <div className="col-md-6 col-left">
+          <div className="col-md-12 col-lg-6 col-md-6 col-left">
             <ReactFancyBox
               thumbnail={props.product.imageUrl}
               image={props.product.imageUrl}
             />
           </div>
-          <div className="col-md-6 right-col">
+          <div className="col-md-12 col-lg-6 right-col">
             <div className="body">
               <h4>{props.product.name}</h4>
               <div className="detail-product">
@@ -29,13 +29,13 @@ export default function ProductDetail(props) {
               <div className="st-info">
                 <div className="extra-info">
                   <span>
-                    <i class="fa fa-check"></i>
+                    <i className="fa fa-check"></i>
                   </span>
                   <span>Order before tomorrow 15:00 to receive tomorrow.</span>
                 </div>
                 <div className="extra-info">
                   <span>
-                    <i class="fa fa-check"></i>
+                    <i className="fa fa-check"></i>
                   </span>
                   <span>Worldwide shipping.</span>
                 </div>
@@ -49,8 +49,7 @@ export default function ProductDetail(props) {
                 >
                   Add to cart
                 </button>
-              </div>
-              <div className="btn-wrapper">
+
                 <button
                   type="button"
                   className="btn btn-lg btn-add-wish"

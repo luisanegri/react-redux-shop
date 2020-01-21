@@ -8,15 +8,15 @@ export default function WishList(props) {
         <div className="row">
           <div className="col-md-4 col-left-cart">
             <h5>Your Wish List</h5>
-            <Link to="/" class="btn btn-link btn-delete">
+            <Link to="/" className="btn btn-link btn-delete">
               <span>
-                <i class="fa fa-chevron-left"></i>
+                <i className="fa fa-chevron-left"></i>
               </span>
               Keep Shopping
             </Link>
           </div>
           <div className="col-md-8 col-right-cart">
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Product</th>
@@ -33,7 +33,7 @@ export default function WishList(props) {
                     <th scope="row">
                       <button
                         type="button"
-                        class="btn btn-link btn-delete"
+                        className="btn btn-link btn-delete"
                         onClick={() => props.deleteFromWishList(item.id)}
                       >
                         Delete

@@ -2,13 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
-  console.log('Cart. props are you there?', props);
-  // const totalPrice = props.cart
-  //   .map(item => item.price)
-  //   .reduce((acc, value) => {
-  //     return acc + value.quantity * value.price;
-  //   }, 0);
-  // console.log('total price?????????????/', totalPrice);
   const empty = !props.cart.length;
   if (empty) {
     return (
@@ -25,10 +18,10 @@ export default function Cart(props) {
     );
   }
   return (
-    <div>
+    <div className="wrapper-cart">
       <div className="container-fluid container-product">
         <div className="row">
-          <div className="col-md-4 col-left-cart">
+          <div className="col-xs-12 col-md-4 col-left-cart">
             <h5>Your bag</h5>
             <Link to="/products" class="btn btn-link btn-delete">
               <span>
@@ -37,7 +30,7 @@ export default function Cart(props) {
               Keep Shopping
             </Link>
           </div>
-          <div className="col-md-8 col-right-cart">
+          <div className="col-xs-12 col-md-8 col-right-cart">
             <table class="table">
               <thead>
                 <tr>
@@ -52,10 +45,8 @@ export default function Cart(props) {
               </thead>
               <tbody>
                 {props.cart.map(item => (
-                  <tr>
-                    {/* <img src={item.imageUrl} key={item.id} alt={item.name} /> */}
+                  <tr key={item.id}>
                     <th scope="row">{item.name}</th>
-
                     <td>87320</td>
                     <th scope="row" className="qty">
                       <span>

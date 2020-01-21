@@ -17,9 +17,7 @@ export function getProductDetail(productId) {
     superagent(`http://localhost:3010/products/${productId}`)
       .then(response => response.body)
       .then(product => {
-        console.log('product', product);
         dispatch(setProductsDetails(product));
-        console.log('product?????', product);
       });
   };
 }

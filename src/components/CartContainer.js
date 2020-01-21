@@ -8,7 +8,6 @@ class CartContainer extends React.Component {
     total();
   }
   render() {
-    console.log('CART', this.props);
     return (
       <Cart
         cart={this.props.cart}
@@ -39,7 +38,4 @@ const mapActionsToProps = () => {
 };
 
 // connect will call the mapStateToProps after an action has been dispatched and handled
-export default connect(
-  mapStateToProps,
-  mapActionsToProps()
-)(CartContainer);
+export default connect(mapStateToProps, mapActionsToProps())(CartContainer);

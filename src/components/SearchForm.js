@@ -16,12 +16,13 @@ class SearchForm extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="container searchbar">
         <form onSubmit={this.handleSubmit} style={{ marginTop: '56px' }}>
-          <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+          <div className="md-form active-pink active-pink-2 mb-3 mt-0">
+            <label>Search</label>
             <input
               onChange={this.handleChange}
-              class="form-control"
+              className="form-control"
               type="text"
               placeholder="Search"
               aria-label="Search"
