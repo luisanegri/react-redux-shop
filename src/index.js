@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <App />
     </Router>
   </Provider>,
