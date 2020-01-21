@@ -210,6 +210,7 @@ tbody th {
   transform: translateX(-50%);
   bottom: 2px;
   font-size: 13px;
+  color: black;
 }
 
 .qty {

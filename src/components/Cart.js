@@ -62,7 +62,7 @@ export default function Cart(props) {
                       <span>
                         <button
                           type="button"
-                          className="btn btn-lg btn-checkout"
+                          className="btn btn-lg btn-checkout btn-rm-bg"
                           onClick={() => props.increment(item.id)}
                         >
                           <i class="fa fa-plus"></i>
