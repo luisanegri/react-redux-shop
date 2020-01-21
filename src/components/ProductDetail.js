@@ -3,7 +3,6 @@ import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
 export default function ProductDetail(props) {
-  console.log('props are you there?', props);
   return (
     <div>
       <div className="container-fluid container-product">
@@ -40,24 +39,23 @@ export default function ProductDetail(props) {
                   <span>Worldwide shipping.</span>
                 </div>
               </div>
+            </div>
+            <div className="btn-wrapper">
+              <button
+                type="button"
+                className="btn btn-lg btn-add-cart"
+                onClick={() => props.addToCart(props.product)}
+              >
+                Add to cart
+              </button>
 
-              <div className="btn-wrapper">
-                <button
-                  type="button"
-                  className="btn btn-lg btn-add-cart"
-                  onClick={() => props.addToCart(props.product)}
-                >
-                  Add to cart
-                </button>
-
-                <button
-                  type="button"
-                  className="btn btn-lg btn-add-wish"
-                  onClick={() => props.addWish(props.product)}
-                >
-                  Add to wishlist
-                </button>
-              </div>
+              <button
+                type="button"
+                className="btn btn-lg btn-add-wish"
+                onClick={() => props.addWish(props.product)}
+              >
+                Add to wishlist
+              </button>
             </div>
           </div>
         </div>

@@ -38,6 +38,12 @@ body {
   font-size: 14px;
 }
 
+.btn-wrapper .btn-add-cart:hover,
+.btn-wrapper .btn-add-wish:hover {
+  background: black;
+  color: white;
+}
+
 .right-col .btn-add-cart {
   border-bottom-color: transparent;
 }
@@ -389,10 +395,6 @@ section {
   font-size: 14px;
 }
 
-.btn {
-  background: unset !important;
-}
-
 .searchbar .form-control {
   display: inline;
   width: 50%;
@@ -440,5 +442,16 @@ section {
   }
   .react-fancybox .thumbnail img {
     width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .right-col {
+    position: relative;
+  }
+  .btn-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
