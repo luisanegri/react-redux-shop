@@ -418,6 +418,10 @@ section {
   margin-top: 30px;
 }
 
+.btn-rm-bg {
+  background: unset;
+}
+
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {

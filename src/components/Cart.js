@@ -23,7 +23,7 @@ export default function Cart(props) {
         <div className="row">
           <div className="col-xs-12 col-md-4 col-left-cart">
             <h5>Your bag</h5>
-            <Link to="/products" class="btn btn-link btn-delete">
+            <Link to="/products" class="btn btn-link btn-delete btn-rm-bg">
               <span>
                 <i class="fa fa-chevron-left"></i>
               </span>
@@ -52,7 +52,7 @@ export default function Cart(props) {
                       <span>
                         <button
                           type="button"
-                          className="btn btn-lg btn-checkout"
+                          className="btn btn-lg btn-checkout btn-rm-bg"
                           onClick={() => props.decrement(item.id)}
                         >
                           <i class="fa fa-minus"></i>
@@ -72,7 +72,7 @@ export default function Cart(props) {
                     <th scope="row">
                       <button
                         type="button"
-                        class="btn btn-link btn-delete"
+                        class="btn btn-link btn-delete btn-rm-bg"
                         onClick={() => props.deleteFromCart(item.id)}
                       >
                         Delete
