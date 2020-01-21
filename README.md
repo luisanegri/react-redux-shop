@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web Shop .  
+Demo:  
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+>Web Shop with clean and minimalistic UI created using React & Redux.
 
-### `npm start`
+## UX
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The user can search for products, view a list of products and details about each item. On the detail page the user can see the product's description, price and add it to the cart or to the wishlist. The cart shows the chosen product, its price and quantity.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+* View products list
+* Read details about a specific product
+* Search products
+* Add product to Cart
+* Add product to Wishlist
+* Increase/decrease quantity of items
+* Delete a chosen item
+* Calculate total according to quantity
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+* [Superagent](https://visionmedia.github.io/superagent/)
+* [React](https://reactjs.org/)
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [Redux](https://redux.js.org/)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
+* [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
+* [Json-server](https://github.com/typicode/json-server)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* The website was tested in different devices and adapted accordingly using media queries and bootstrap.
+* Manually tested each feature and component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Install
 
-### `npm run eject`
+1. Clone repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        git clone [repository url]
+        
+2. Install dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        npm install
+        
+3. Run json-server
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+        json-server db.json --port 3010
+        
+4. Start app
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        npm run start
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Github Pages
