@@ -14,7 +14,7 @@ export function setProductsDetails(product) {
 // Async action, which dispatches a synchronous action when it has fetched the data
 export function getProductDetail(productId) {
   return function(dispatch) {
-    superagent(`http://localhost:3010/products/${productId}`)
+    superagent(`https://webshop-db.herokuapp.com/products/${productId}`)
       .then(response => response.body)
       .then(product => {
         dispatch(setProductsDetails(product));

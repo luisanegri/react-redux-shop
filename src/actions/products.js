@@ -10,7 +10,7 @@ export function setProducts(products) {
 }
 export function getProducts() {
   return function(dispatch) {
-    fetch('http://localhost:3010/products')
+    fetch('https://webshop-db.herokuapp.com/products')
       .then(res => res.json())
       .then(products => {
         dispatch(setProducts(products));
