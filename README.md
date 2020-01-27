@@ -1,4 +1,4 @@
-# Web Shop .  
+# Shop App  
 Demo:  
 
 ## Overview
