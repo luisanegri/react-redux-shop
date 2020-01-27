@@ -1,5 +1,5 @@
 # Shop App  
-Demo:  
+Demo: https://react-redux-webshop.herokuapp.com/
 
 ## Overview
 
