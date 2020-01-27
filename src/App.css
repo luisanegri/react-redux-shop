@@ -426,6 +426,11 @@ section {
   margin-top: -6px;
 }
 
+.nav-c .mr-auto {
+  left: auto !important;
+  right: 10px;
+  position: absolute;
+}
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {
