@@ -1,4 +1,4 @@
-# Web Shop .  
+# Shop App  
 Demo:  
 
 ## Overview
@@ -18,7 +18,7 @@ The user can search for products, view a list of products and details about each
 * Add product to Wishlist
 * Increase/decrease quantity of items
 * Delete a chosen item
-* Calculate total according to quantity
+* Calculate total according to quantity of items
 
 ## Technologies Used
 
@@ -27,6 +27,7 @@ The user can search for products, view a list of products and details about each
 * [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 * [Redux](https://redux.js.org/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
+* [React Fancybox](https://github.com/gianglevan94/react-fancybox)
 * [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
 * [Json-server](https://github.com/typicode/json-server)
 
@@ -45,14 +46,10 @@ The user can search for products, view a list of products and details about each
 
         npm install
         
-3. Run json-server
-
-        json-server db.json --port 3010
-        
-4. Start app
+3. Start app
 
         npm run start
 
 ## Deployment
 
-Github Pages
+Heroku
