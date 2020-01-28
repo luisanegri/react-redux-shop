@@ -11,7 +11,10 @@ The user can search for products, view a list of products and details about each
 
 ## Wireframe
 
+Created using [Figma](https://figma.com)
+
 ![alt text](https://i.postimg.cc/8zmqr1Kp/Untitled-1.png)
+![alt text](https://i.postimg.cc/G2w7MVS7/Untitled-2.png)
 
 
 
