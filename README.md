@@ -11,7 +11,8 @@ The user can search for products, view a list of products and details about each
 
 ## Wireframe
 
-[Untitled-1.png](https://postimg.cc/w13WCdYZ)
+![alt text](https://i.postimg.cc/8zmqr1Kp/Untitled-1.png)
+
 
 
 ## Features
