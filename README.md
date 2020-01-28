@@ -9,6 +9,11 @@ Demo: https://react-redux-webshop.herokuapp.com/
 
 The user can search for products, view a list of products and details about each item. On the detail page the user can see the product's description, price and add it to the cart or to the wishlist. The cart shows the chosen product, its price and quantity.
 
+## Wireframe
+
+[Untitled-1.png](https://postimg.cc/w13WCdYZ)
+
+
 ## Features
 
 * View products list
