@@ -1,5 +1,5 @@
 # Shop App  
-Demo:  
+Demo: https://react-redux-webshop.herokuapp.com/
 
 ## Overview
 
@@ -8,6 +8,15 @@ Demo:
 ## UX
 
 The user can search for products, view a list of products and details about each item. On the detail page the user can see the product's description, price and add it to the cart or to the wishlist. The cart shows the chosen product, its price and quantity.
+
+## Wireframe
+
+Created using [Figma](https://figma.com)
+
+![alt text](https://i.postimg.cc/8zmqr1Kp/Untitled-1.png)
+![alt text](https://i.postimg.cc/G2w7MVS7/Untitled-2.png)
+
+
 
 ## Features
 
