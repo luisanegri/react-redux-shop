@@ -23,7 +23,7 @@ export default function WishList(props) {
         <div className="row">
           <div className="col-md-4 col-left-cart">
             <h5>Your Wish List</h5>
-            <Link to="/" className="btn btn-link btn-delete">
+            <Link to="/products" className="btn btn-link btn-delete">
               <span>
                 <i className="fa fa-chevron-left"></i>
               </span>
