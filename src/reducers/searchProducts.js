@@ -7,9 +7,6 @@ const reducer = (state = [], action = {}) => {
       const filtered = products.filter(product => {
         return product.name.includes(action.payload.query);
       });
-
-      console.log('filtered test:', filtered);
-
       return filtered;
     default:
       return state;
