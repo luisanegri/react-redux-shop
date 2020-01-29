@@ -2,6 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function WishList(props) {
+  const empty = !props.wish.length;
+  if (empty) {
+    return (
+      <p
+        style={{
+          marginTop: '100px',
+          textAlign: 'center',
+          fontFamily: 'Quicksand',
+          fontWeight: 500
+        }}
+      >
+        Your wishlist is empty!
+      </p>
+    );
+  }
   return (
     <div>
       <div className="container-fluid container-product">
@@ -15,20 +30,30 @@ export default function WishList(props) {
               Keep Shopping
             </Link>
           </div>
-          <div className="col-md-8 col-right-cart">
+          <div className="col-md-8 col-right-cart table-wish">
             <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Product</th>
+                  <th scope="col">Price</th>
                   <th scope="col">Ref.</th>
                   <th scope="col"></th>
-                  <th scope="col">Price</th>
                 </tr>
               </thead>
               <tbody>
                 {props.wish.map(item => (
                   <tr>
-                    <th scope="row">{item.name}</th>
+                    <td>
+                      <img
+                        src={item.imageUrl}
+                        key={item.id}
+                        alt={item.name}
+                        className="img-table-wish"
+                      />
+                      <span>{item.name}</span>
+                    </td>
+
+                    <td>€ {item.price}</td>
                     <td>87320</td>
                     <th scope="row">
                       <button
@@ -39,8 +64,6 @@ export default function WishList(props) {
                         Delete
                       </button>
                     </th>
-                    <td>€ {item.price}</td>
-                    <img src={item.imageUrl} key={item.id} alt={item.name} />
                   </tr>
                 ))}
               </tbody>

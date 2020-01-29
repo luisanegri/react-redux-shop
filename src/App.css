@@ -437,6 +437,22 @@ section {
   right: 10px;
   position: absolute;
 }
+
+.img-table-wish {
+  width: 50px;
+  border: 1px solid #dee2e6;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.table-wish .table td,
+.table-wish .table th {
+  vertical-align: inherit;
+}
+
+.table-wish .btn-delete {
+  float: right;
+}
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {
