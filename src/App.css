@@ -340,7 +340,7 @@ section {
 .home-image {
   display: block;
   position: absolute;
-  background-image: url('https://d2jv9003bew7ag.cloudfront.net/uploads/Margaret-Bourke-White-WOR-radio-transmitting-tower-1935.jpg');
+  /* background-image: url('https://d2jv9003bew7ag.cloudfront.net/uploads/Margaret-Bourke-White-WOR-radio-transmitting-tower-1935.jpg'); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -378,7 +378,9 @@ section {
 }
 
 .hero-text .btn-home:hover {
-  color: white;
+  color: black;
+  background: transparent;
+  border: 1px solid;
 }
 
 .cart-wrapper p {
