@@ -13,7 +13,6 @@ export function getProducts() {
     fetch('https://webshop-db.herokuapp.com/products')
       .then(res => res.json())
       .then(products => {
-        console.log('products', products);
         dispatch(setProducts(products));
       });
   };

@@ -2,9 +2,7 @@ const reducer = (state = [], action = {}) => {
   switch (action.type) {
     case 'ADD_TO_CART':
       const product = { ...action.payload, quantity: 1 };
-      // if the product is already in the array
       const already = state.find(product => product.id === action.payload.id);
-      // then do not repeat the product but instead increase the quantity
       if (already) {
         return state.map(product =>
           product.id === action.payload.id
@@ -14,12 +12,10 @@ const reducer = (state = [], action = {}) => {
       }
       return [...state, product];
     case 'REMOVE_FROM_CART':
-      console.log('action being called?', action.payload);
       return state.filter(product => product.id !== action.payload);
     case 'INCREMENT':
       const newArr1 = state.map(product => {
         if (product.id === action.payload.id) {
-          console.log('found the product!', product);
           product.quantity++;
         }
         return product;
@@ -28,7 +24,6 @@ const reducer = (state = [], action = {}) => {
     case 'DECREMENT':
       const newArr2 = state.map(product => {
         if (product.id === action.payload.id) {
-          console.log('found the product!', product);
           product.quantity--;
         }
         return product;
@@ -40,7 +35,6 @@ const reducer = (state = [], action = {}) => {
         .reduce((total, value) => {
           return total + value.quantity * value.price;
         }, 0);
-      console.log('TOTAL', newArr3);
       return newArr3;
     default:
       return state;
