@@ -10,7 +10,7 @@ export default function Cart(props) {
           marginTop: '100px',
           textAlign: 'center',
           fontFamily: 'Quicksand',
-          fontWeight: 500
+          fontWeight: 500,
         }}
       >
         Your bag is empty!
@@ -44,7 +44,7 @@ export default function Cart(props) {
                 </tr>
               </thead>
               <tbody>
-                {props.cart.map(item => (
+                {props.cart.map((item) => (
                   <tr key={item.id}>
                     <th scope="row">{item.name}</th>
                     <td>87320</td>
@@ -87,9 +87,7 @@ export default function Cart(props) {
             </table>
           </div>
         </div>
-        <button className="btn" id="btn-checkout-cart">
-          Checkout
-        </button>
+        <button className="custom-button">Checkout</button>
       </div>
     </div>
   );
