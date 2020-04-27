@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
@@ -10,24 +9,65 @@ import WishListContainer from './components/WishListContainer';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import NavbarContainer from './components/NavbarContainer';
+import SignInAndSignUpPage from './components/SignInAndUp';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
-// import NavBar from './components/NavBar';
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-function App() {
-  return (
-    <div className="App">
-      <NavbarContainer />
-      <Switch>
-        {/* <NavbarContainer /> */}
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/products" component={ProductsContainer}></Route>
-        <Route path="/product/:id" component={ProductDetailContainer}></Route>
-        <Route path="/cart" component={CartContainer} />
-        <Route path="/wishlist" component={WishListContainer}></Route>
-      </Switch>
-      <Footer />
-    </div>
-  );
+    this.state = {
+      currentUser: null,
+    };
+  }
+
+  componentDidMount() {
+    // when the user signs in
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        // get back the userRef from the createUserProfileDocument
+        // method from the userAuth obj being passed in
+        const userRef = await createUserProfileDocument(userAuth);
+        console.log('const userRef', userRef);
+
+        // provide the user data to the app
+        userRef.onSnapshot((snapShot) => {
+          this.setState(
+            {
+              currentUser: {
+                id: snapShot.id,
+                ...snapShot.data(),
+              },
+            },
+            () => {
+              console.log('onSnapshot', this.state);
+            }
+          );
+        });
+      } else {
+        // when user logs out currentUser is null
+        this.setState({ currentUser: userAuth });
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <NavbarContainer currentUser={this.state.currentUser} />
+        {console.log('parent - props being passed', this.state.currentUser)}
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/products" component={ProductsContainer}></Route>
+          <Route path="/product/:id" component={ProductDetailContainer}></Route>
+          <Route path="/cart" component={CartContainer} />
+          <Route path="/wishlist" component={WishListContainer}></Route>
+          <Route path="/signin" component={SignInAndSignUpPage} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

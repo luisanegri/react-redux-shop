@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase/firebase.utils';
 
-export default function NavBar(props) {
+export default function NavBar({ cart, currentUser }) {
   return (
     <div className="nav-c">
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -31,7 +32,7 @@ export default function NavBar(props) {
             </li>
             <li className="nav-item">
               <Link className="nav-link link-custom" to="/cart">
-                {props.cart.length}
+                {cart.length}
 
                 <i className="fa fa-shopping-cart"></i>
               </Link>
@@ -42,6 +43,26 @@ export default function NavBar(props) {
                 <i className="fa fa-heart"></i>
               </Link>
             </li>
+            {currentUser ? (
+              <li className="nav-item">
+                <div
+                  className="nav-link link-custom"
+                  onClick={() => auth.signOut()}
+                >
+                  Sign out
+                </div>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <Link
+                  to="/signin"
+                  className="nav-link link-custom"
+                  onClick={() => auth.signOut()}
+                >
+                  Sign in
+                </Link>
+              </li>
+            )}
             <li className="nav-item"></li>
           </ul>
         </div>
