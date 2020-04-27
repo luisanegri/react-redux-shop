@@ -11,6 +11,8 @@ import Home from './components/Home';
 import NavbarContainer from './components/NavbarContainer';
 import SignInAndSignUpPage from './components/SignInAndUp';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { connect } from 'react-redux';
+import { setCurrentUser } from './actions/user';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
     // when the user signs in
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -32,7 +35,7 @@ class App extends React.Component {
 
         // provide the user data to the app
         userRef.onSnapshot((snapShot) => {
-          this.setState(
+          setCurrentUser(
             {
               currentUser: {
                 id: snapShot.id,
@@ -46,7 +49,7 @@ class App extends React.Component {
         });
       } else {
         // when user logs out currentUser is null
-        this.setState({ currentUser: userAuth });
+        setCurrentUser(userAuth);
       }
     });
   }
@@ -70,4 +73,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
