@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Quicksand:400,500,600&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
 html,
 body {
   margin: 0;
@@ -454,6 +459,64 @@ section {
 .table-wish .btn-delete {
   float: right;
 }
+
+.sign-in-and-sign-up {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.sign-up {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-button {
+  float: right;
+  background: black;
+  color: white;
+  border-radius: 0;
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 8px 20px;
+  border: none;
+}
+
+.google-sign-in {
+  background-color: #4285f4;
+  color: white;
+}
+
+.sign-in h2,
+.sign-up h2 {
+  padding: 40px 0 0px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.sign-in span,
+.sign-up span {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.sign label {
+  margin-top: 10px;
+}
+
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {

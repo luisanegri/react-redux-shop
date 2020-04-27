@@ -3,6 +3,7 @@ import axios from 'axios';
 export const SET_PRODUCTS = 'SET_PRODUCTS';
 
 const baseURL = 'https://webshop-db.herokuapp.com/products';
+
 export function setProducts(products) {
   return {
     type: 'SET_PRODUCTS',
@@ -19,7 +20,6 @@ export function getProducts() {
       .then(function(response) {
         const products = response.data;
         return products;
-        // console.log(products);
       })
       .then(products => {
         dispatch(setProducts(products));
