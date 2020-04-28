@@ -4,21 +4,29 @@ import { connect } from 'react-redux';
 
 class NavbarContainer extends Component {
   render() {
-    // const { currentUser } = this.props;
-    console.log('NavbarContainer currentUser', this.props);
     return (
       <div>
-        <NavBar cart={this.props.cart} currentUser={this.props.user} />;
+        <NavBar
+          cart={this.props.cart}
+          currentUser={this.props.user}
+          itemCount={this.props.itemCount}
+        />
+        ;
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log('currentUSer mapstatetoprops', state);
+  console.log('cart', state);
   return {
     cart: state.cart,
     user: state.user.currentUser,
+    itemCount: state.cart.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity,
+      0
+    ),
   };
 };
 

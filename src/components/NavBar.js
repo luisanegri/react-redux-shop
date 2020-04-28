@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase/firebase.utils';
 
-export default function NavBar({ cart, currentUser }) {
+export default function NavBar({ cart, currentUser, itemCount }) {
   return (
     <div className="nav-c">
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -32,7 +32,7 @@ export default function NavBar({ cart, currentUser }) {
             </li>
             <li className="nav-item">
               <Link className="nav-link link-custom" to="/cart">
-                {cart.length}
+                {itemCount}
 
                 <i className="fa fa-shopping-cart"></i>
               </Link>
