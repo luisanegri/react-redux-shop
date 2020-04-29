@@ -18,7 +18,6 @@ class NavbarContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('cart', state);
   return {
     cart: state.cart,
     user: state.user.currentUser,
