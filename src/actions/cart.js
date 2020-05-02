@@ -1,42 +1,25 @@
-export const ADD_TO_CART = 'ADD_TO_CART';
-export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const TOTAL = 'TOTAL';
+// export const ADD_TO_CART = 'ADD_TO_CART';
+// export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+// export const INCREMENT = 'INCREMENT';
+// export const DECREMENT = 'DECREMENT';
+// export const TOTAL = 'TOTAL';
 
-export function addToCart(product) {
+export const addProduct = (product) => {
   return {
-    type: 'ADD_TO_CART',
-    payload: product
-  };
-}
-
-export const deleteFromCart = id => {
-  return {
-    type: 'REMOVE_FROM_CART',
-    payload: id
+    type: 'ADD_PRODUCT',
+    payload: product,
   };
 };
 
-export const increment = (id, val) => {
-  return {
-    type: 'INCREMENT',
-    payload: {
-      quantity: val,
-      id: id
-    }
-  };
-};
+export const clearProductFromCart = (product) => ({
+  type: 'CLEAR_PRODUCT_FROM_CART',
+  payload: product,
+});
 
-export const decrement = (id, val) => {
-  return {
-    type: 'DECREMENT',
-    payload: {
-      quantity: val,
-      id: id
-    }
-  };
-};
+export const removeProduct = (product) => ({
+  type: 'REMOVE_PRODUCT',
+  payload: product,
+});
 
 export const total = (quantity, price) => {
   return {
@@ -44,7 +27,24 @@ export const total = (quantity, price) => {
     payload: {
       quantity,
       price,
-      total
-    }
+      total,
+    },
   };
 };
+
+// export const deleteFromCart = (id) => {
+//   return {
+//     type: 'REMOVE_FROM_CART',
+//     payload: id,
+//   };
+// };
+
+// export const increment = (id, val) => {
+//   return {
+//     type: 'INCREMENT',
+//     payload: {
+//       quantity: val,
+//       id: id
+//     }
+//   };
+// };

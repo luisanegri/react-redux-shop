@@ -44,7 +44,7 @@ export default function ProductDetail(props) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-cart"
-                onClick={() => props.addToCart(props.product)}
+                onClick={() => props.addProduct(props.product)}
               >
                 Add to cart
               </button>

@@ -8,7 +8,7 @@ class NavbarContainer extends Component {
       <div>
         <NavBar
           cart={this.props.cart}
-          currentUser={this.props.user}
+          currentUser={this.props.currentUser}
           itemCount={this.props.itemCount}
         />
         ;
@@ -20,12 +20,12 @@ class NavbarContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
-    user: state.user.currentUser,
-    itemCount: state.cart.reduce(
-      (accumulatedQuantity, cartItem) =>
-        accumulatedQuantity + cartItem.quantity,
-      0
-    ),
+    currentUser: state.user.currentUser,
+    // itemCount: state.cart.reduce(
+    //   (accumulatedQuantity, cartItem) =>
+    //     accumulatedQuantity + cartItem.quantity,
+    //   0
+    // ),
   };
 };
 

@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <i className="fa fa-heart"></i>
           </div>
-          <p>© 2019 Copyright</p>
+          <p>© 2020 Copyright</p>
         </div>
       </footer>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import { getProductDetail } from '../actions/product-detail';
-import { addToCart } from '../actions/cart';
+import { addProduct } from '../actions/cart';
 import { addWish } from '../actions/wish';
 
 class ProductDetailContainer extends React.Component {
@@ -17,7 +17,7 @@ class ProductDetailContainer extends React.Component {
       <div>
         <ProductDetail
           product={this.props.product}
-          addToCart={this.props.addToCart}
+          addProduct={this.props.addProduct}
           addWish={this.props.addWish}
         />
       </div>
@@ -25,19 +25,19 @@ class ProductDetailContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     product: state.productDetail,
     cart: state.cart,
-    wish: state.wish
+    wish: state.wish,
   };
 };
 
 const mapActionsToProps = () => {
   return {
     getProductDetail: getProductDetail,
-    addToCart: addToCart,
-    addWish: addWish
+    addProduct: addProduct,
+    addWish: addWish,
   };
 };
 
