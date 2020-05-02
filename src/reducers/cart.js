@@ -24,13 +24,24 @@ const reducer = (state = [], action = {}) => {
       });
       return newArr1;
     case 'DECREMENT':
-      const newArr2 = state.map((product) => {
-        if (product.id === action.payload.id) {
-          product.quantity--;
+      const decrementProductFromCart = (products, productToRemove) => {
+        const existingCartProduct = products.find(
+          (product) => product.id === productToRemove.id
+        );
+
+        if (existingCartProduct.quantity === 1) {
+          return products.filter(
+            (product) => product.id !== productToRemove.id
+          );
         }
-        return product;
-      });
-      return newArr2;
+
+        return products.map((product) =>
+          product.id === productToRemove
+            ? { ...product, quantity: product.quantity - 1 }
+            : product
+        );
+      };
+      return decrementProductFromCart;
     case 'TOTAL':
       const newArr3 = state
         .map((item) => item.id)

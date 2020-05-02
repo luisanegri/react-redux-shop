@@ -64,7 +64,7 @@ export default function Cart(props) {
                           <button
                             type="button"
                             className="btn btn-id btn-rm-bg"
-                            onClick={() => props.increment(item.id)}
+                            onClick={() => props.addToCart(item)}
                           >
                             <i class="fa fa-plus"></i>
                           </button>

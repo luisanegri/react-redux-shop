@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase/firebase.utils';
 
-export default function NavBar({ cart, currentUser, itemCount }) {
+export default function NavBar({ currentUser, itemCount }) {
   return (
     <div className="nav-c">
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
