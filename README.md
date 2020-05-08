@@ -22,12 +22,12 @@ Created using [Figma](https://figma.com)
 
 * View products list
 * Read details about a specific product
-* Search products
 * Add product to Cart
 * Add product to Wishlist
 * Increase/decrease quantity of items
 * Delete a chosen item
 * Calculate total according to quantity of items
+* Sign in & Sign up
 
 ## Technologies Used
 
@@ -39,6 +39,7 @@ Created using [Figma](https://figma.com)
 * [React Fancybox](https://github.com/gianglevan94/react-fancybox)
 * [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
 * [Json-server](https://github.com/typicode/json-server)
+* [Firebase](https://firebase.google.com/)
 
 ## Testing
 
