@@ -1,12 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cart from './Cart';
-import { deleteFromCart, addItem, decrement, total } from '../actions/cart';
+import { deleteFromCart, addItem, decrement } from '../actions/cart';
 
 class CartContainer extends React.Component {
-  componentDidMount() {
-    total();
-  }
   render() {
     return (
       <Cart
@@ -14,16 +11,20 @@ class CartContainer extends React.Component {
         deleteFromCart={this.props.deleteFromCart}
         addItem={this.props.addItem}
         decrement={this.props.decrement}
-        total={this.props.total}
+        cartTotal={this.props.cartTotal}
       />
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log('cart container state', state);
   return {
     cart: state.cart,
+    cartTotal: state.cart.cartItems.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity * cartItem.price,
+      0
+    ),
   };
 };
 

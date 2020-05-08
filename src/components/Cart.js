@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Cart({ cart, decrement, addItem, deleteFromCart }) {
+export default function Cart({
+  cart,
+  decrement,
+  addItem,
+  deleteFromCart,
+  cartTotal,
+}) {
   const empty = !cart.cartItems.length;
   if (empty) {
     return (
@@ -80,7 +86,7 @@ export default function Cart({ cart, decrement, addItem, deleteFromCart }) {
                         Delete
                       </button>
                     </th>
-                    <td>€ {item.price * item.quantity}</td>
+                    <td>€ {cartTotal}</td>
                   </tr>
                 ))}
               </tbody>
