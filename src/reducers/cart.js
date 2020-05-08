@@ -5,7 +5,10 @@ const INITIAL_STATE = {
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
-      return [...state.cartItems, action.payload];
+      return {
+        ...state,
+        cartItems: [...state.cartItems, action.payload],
+      };
     case 'REMOVE_FROM_CART':
       return state.filter((product) => product.id !== action.payload);
     case 'INCREMENT':

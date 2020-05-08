@@ -20,9 +20,10 @@ class CartContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+  console.log('cart container state', state);
   return {
-    cart: state.cart
+    cart: state.cart,
   };
 };
 
@@ -31,7 +32,7 @@ const mapActionsToProps = () => {
     deleteFromCart: deleteFromCart,
     increment: increment,
     decrement: decrement,
-    total: total
+    total: total,
   };
 };
 

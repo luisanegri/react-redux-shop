@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Cart(props) {
-  const empty = !props.cart.length;
+export default function Cart({ cart, decrement, increment, deleteFromCart }) {
+  const empty = !cart.cartItems.length;
   if (empty) {
     return (
       <p
@@ -44,7 +44,7 @@ export default function Cart(props) {
                 </tr>
               </thead>
               <tbody>
-                {props.cart.map((item) => (
+                {cart.cartItems.map((item) => (
                   <tr key={item.id}>
                     <th scope="row">{item.name}</th>
                     <td>87320</td>
@@ -54,7 +54,7 @@ export default function Cart(props) {
                           <button
                             type="button"
                             className="btn btn-id btn-rm-bg"
-                            onClick={() => props.decrement(item.id)}
+                            onClick={() => decrement(item.id)}
                           >
                             <i class="fa fa-minus"></i>
                           </button>
@@ -64,7 +64,7 @@ export default function Cart(props) {
                           <button
                             type="button"
                             className="btn btn-id btn-rm-bg"
-                            onClick={() => props.increment(item.id)}
+                            onClick={() => increment(item.id)}
                           >
                             <i class="fa fa-plus"></i>
                           </button>
@@ -75,7 +75,7 @@ export default function Cart(props) {
                       <button
                         type="button"
                         class="btn btn-link btn-delete btn-rm-bg"
-                        onClick={() => props.deleteFromCart(item.id)}
+                        onClick={() => deleteFromCart(item.id)}
                       >
                         Delete
                       </button>

@@ -24,12 +24,10 @@ class ProductDetailContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    item: state.productDetail,
-    cart: state.cart,
-  };
-};
+const mapStateToProps = (state) => ({
+  item: state.productDetail,
+  cart: state.cart,
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
