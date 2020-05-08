@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Cart({ cart, decrement, increment, deleteFromCart }) {
+export default function Cart({ cart, decrement, addItem, deleteFromCart }) {
   const empty = !cart.cartItems.length;
   if (empty) {
     return (
@@ -64,7 +64,7 @@ export default function Cart({ cart, decrement, increment, deleteFromCart }) {
                           <button
                             type="button"
                             className="btn btn-id btn-rm-bg"
-                            onClick={() => increment(item.id)}
+                            onClick={() => addItem(item)}
                           >
                             <i class="fa fa-plus"></i>
                           </button>
