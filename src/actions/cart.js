@@ -8,22 +8,10 @@ export const addItem = (item) => ({
   payload: item,
 });
 
-export const deleteFromCart = (id) => {
-  return {
-    type: 'REMOVE_FROM_CART',
-    payload: id,
-  };
-};
-
-export const increment = (id, val) => {
-  return {
-    type: 'INCREMENT',
-    payload: {
-      quantity: val,
-      id: id,
-    },
-  };
-};
+export const deleteFromCart = (item) => ({
+  type: 'DELETE_FROM_CART',
+  payload: item,
+});
 
 export const decrement = (id, val) => {
   return {

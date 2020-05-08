@@ -30,15 +30,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
+  deleteFromCart: (item) => dispatch(deleteFromCart(item)),
 });
-
-// const mapActionsToProps = () => {
-//   return {
-//     deleteFromCart: deleteFromCart,
-//     increment: increment,
-//     decrement: decrement,
-//     total: total,
-//   };
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartContainer);

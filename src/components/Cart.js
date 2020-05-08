@@ -81,7 +81,7 @@ export default function Cart({
                       <button
                         type="button"
                         class="btn btn-link btn-delete btn-rm-bg"
-                        onClick={() => deleteFromCart(item.id)}
+                        onClick={() => deleteFromCart(item)}
                       >
                         Delete
                       </button>

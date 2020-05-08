@@ -11,8 +11,13 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
       };
-    // case 'REMOVE_FROM_CART':
-    //   return state.filter((product) => product.id !== action.payload);
+    case 'DELETE_FROM_CART':
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          (cartItem) => cartItem.id !== action.payload.id
+        ),
+      };
     // case 'INCREMENT':
     //   const newArr1 = state.cartItems.map((product) => {
     //     if (product.id === action.payload.id) {
@@ -29,13 +34,6 @@ const reducer = (state = INITIAL_STATE, action) => {
     //     return product;
     //   });
     //   return newArr2;
-    // case 'TOTAL':
-    //   const newArr3 = state.cartItems
-    //     .map((item) => item.id)
-    //     .reduce((total, value) => {
-    //       return total + value.quantity * value.price;
-    //     }, 0);
-    //   return newArr3;
     default:
       return state;
   }
