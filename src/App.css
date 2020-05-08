@@ -172,6 +172,7 @@ tbody th {
   font-size: 20px;
   letter-spacing: 2px;
   font-family: 'Quicksand', sans-serif;
+  margin-top: 40px;
 }
 
 .col-mb {
@@ -515,6 +516,10 @@ section {
 
 .sign label {
   margin-top: 10px;
+}
+
+.nav-link link-custom {
+  cursor: pointer;
 }
 
 /* ------------- Media Queries ----------------- */
