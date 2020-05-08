@@ -21,11 +21,11 @@ const mapStateToProps = (state) => {
   return {
     cart: state.cart,
     user: state.user.currentUser,
-    // itemCount: state.cart.reduce(
-    //   (accumulatedQuantity, cartItem) =>
-    //     accumulatedQuantity + cartItem.quantity,
-    //   0
-    // ),
+    itemCount: state.cart.cartItems.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity,
+      0
+    ),
   };
 };
 
