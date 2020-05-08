@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ProductList(props) {
-  const products = props.search.length ? props.search : props.products;
-
+export default function ProductList({ products }) {
   return (
     <div className="product-list-component">
       <h4>Products</h4>
       <div className="container">
         <div className="row">
-          {products.map(product => (
+          {products.map((product) => (
             <div key={product.id} className="col-sm-6 col-md-4 col-mb">
               <div className="card product-list">
                 <div className="image-wrapper">

@@ -9,31 +9,18 @@ class ProductsContainer extends React.Component {
   }
 
   render() {
-    if (!this.props.products) {
-      return <p>Loading...</p>;
-    } else {
-      return (
-        <div>
-          <SearchForm
-            products={this.props.products}
-            searchProducts={this.props.searchProducts}
-          />
-          <ProductsList
-            products={this.props.products}
-            search={this.props.search}
-          />
-        </div>
-      );
-    }
+    return (
+      <div>
+        <ProductsList products={this.props.products} />
+      </div>
+    );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     products: state.products,
-    search: state.search,
   };
 };
 
-export default connect(mapStateToProps, { getProducts, searchProducts })(
-  ProductsContainer
-);
+export default connect(mapStateToProps, { getProducts })(ProductsContainer);
