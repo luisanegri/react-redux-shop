@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Cart({
   cart,
-  decrement,
+  removeItem,
   addItem,
   deleteFromCart,
   cartTotal,
@@ -60,7 +60,7 @@ export default function Cart({
                           <button
                             type="button"
                             className="btn btn-id btn-rm-bg"
-                            onClick={() => decrement(item.id)}
+                            onClick={() => removeItem(item)}
                           >
                             <i class="fa fa-minus"></i>
                           </button>

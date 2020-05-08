@@ -13,23 +13,7 @@ export const deleteFromCart = (item) => ({
   payload: item,
 });
 
-export const decrement = (id, val) => {
-  return {
-    type: 'DECREMENT',
-    payload: {
-      quantity: val,
-      id: id,
-    },
-  };
-};
-
-export const total = (quantity, price) => {
-  return {
-    type: 'TOTAL',
-    payload: {
-      quantity,
-      price,
-      total,
-    },
-  };
-};
+export const removeItem = (item) => ({
+  type: 'REMOVE_ITEM',
+  payload: item,
+});
