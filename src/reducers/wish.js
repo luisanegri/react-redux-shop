@@ -1,9 +1,9 @@
 const reducer = (state = [], action = {}) => {
   switch (action.type) {
     case 'ADD_WISH':
-      return [...state, action.payload.product];
+      return [...state, action.payload];
     case 'REMOVE_FROM_WISH_LIST':
-      return state.filter(product => product.id !== action.payload);
+      return state.filter((product) => product.id !== action.payload);
     default:
       return state;
   }

@@ -21,7 +21,7 @@ const mapStateToProps = (state) => {
   return {
     cart: state.cart,
     user: state.user.currentUser,
-    itemCount: state.cart.reduce(
+    itemCount: state.cart.cartItems.reduce(
       (accumulatedQuantity, cartItem) =>
         accumulatedQuantity + cartItem.quantity,
       0

@@ -1,23 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
-import { getProductDetail } from '../actions/product-detail';
-import { addToCart } from '../actions/cart';
+import { getItemDetail } from '../actions/product-detail';
+import { addItem } from '../actions/cart';
 import { addWish } from '../actions/wish';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
-    this.props.getProductDetail(productId);
+    this.props.itemDetail(productId);
   }
 
   render() {
-    if (!this.props.product.name) return 'Loading';
     return (
       <div>
         <ProductDetail
-          product={this.props.product}
-          addToCart={this.props.addToCart}
+          item={this.props.item}
+          addItem={this.props.addItem}
           addWish={this.props.addWish}
         />
       </div>
@@ -25,23 +24,20 @@ class ProductDetailContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    product: state.productDetail,
-    cart: state.cart,
-    wish: state.wish
-  };
-};
+const mapStateToProps = (state) => ({
+  item: state.productDetail,
+  cart: state.cart,
+});
 
-const mapActionsToProps = () => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    getProductDetail: getProductDetail,
-    addToCart: addToCart,
-    addWish: addWish
+    itemDetail: (item) => dispatch(getItemDetail(item)),
+    addItem: (item) => dispatch(addItem(item)),
+    addWish: (item) => dispatch(addWish(item)),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapActionsToProps()
+  mapDispatchToProps
 )(ProductDetailContainer);

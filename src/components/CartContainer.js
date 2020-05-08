@@ -1,38 +1,37 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cart from './Cart';
-import { deleteFromCart, increment, decrement, total } from '../actions/cart';
+import { deleteFromCart, addItem, removeItem } from '../actions/cart';
 
 class CartContainer extends React.Component {
-  componentDidMount() {
-    total();
-  }
   render() {
     return (
       <Cart
         cart={this.props.cart}
         deleteFromCart={this.props.deleteFromCart}
-        increment={this.props.increment}
-        decrement={this.props.decrement}
-        total={this.props.total}
+        addItem={this.props.addItem}
+        removeItem={this.props.removeItem}
+        cartTotal={this.props.cartTotal}
       />
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    cart: state.cart
+    cart: state.cart,
+    cartTotal: state.cart.cartItems.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity * cartItem.price,
+      0
+    ),
   };
 };
 
-const mapActionsToProps = () => {
-  return {
-    deleteFromCart: deleteFromCart,
-    increment: increment,
-    decrement: decrement,
-    total: total
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+  deleteFromCart: (item) => dispatch(deleteFromCart(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
+});
 
-export default connect(mapStateToProps, mapActionsToProps())(CartContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CartContainer);

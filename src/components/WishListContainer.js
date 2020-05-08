@@ -15,10 +15,10 @@ class WishContainer extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     wish: state.wish,
-    deleteFromWishList: deleteFromWishList
+    deleteFromWishList: deleteFromWishList,
   };
 };
 export default connect(mapStateToProps)(WishContainer);

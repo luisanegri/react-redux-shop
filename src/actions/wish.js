@@ -1,16 +1,11 @@
-export function addWish(product, id) {
-  return {
-    type: 'ADD_WISH',
-    payload: {
-      product,
-      id
-    }
-  };
-}
+export const addWish = (item) => ({
+  type: 'ADD_WISH',
+  payload: item,
+});
 
-export const deleteFromWishList = id => {
+export const deleteFromWishList = (id) => {
   return {
     type: 'REMOVE_FROM_WISH_LIST',
-    payload: id
+    payload: id,
   };
 };
