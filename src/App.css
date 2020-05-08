@@ -526,6 +526,11 @@ section {
   cursor: pointer;
 }
 
+.image-wrapper .card-price {
+  float: right;
+  font-size: 15px;
+}
+
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {

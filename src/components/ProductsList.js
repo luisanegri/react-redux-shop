@@ -21,7 +21,8 @@ export default function ProductList({ products }) {
                       <div className="text">View</div>
                     </div>
                   </Link>
-                  <h5 className="card-title">{product.name}</h5>
+                  <span className="card-title">{product.name}</span>
+                  <span className="card-price">€{product.price}</span>
                 </div>
               </div>
             </div>
