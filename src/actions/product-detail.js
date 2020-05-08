@@ -1,20 +1,20 @@
 import superagent from 'superagent';
 
-export const SET_PRODUCT_DETAILS = 'SET_PRODUCT_DETAILS';
+export const SET_ITEM_DETAIL = 'SET_ITEM_DETAIL';
 
-export function setProductsDetails(product) {
+export function setItemDetail(item) {
   return {
-    type: 'SET_PRODUCTS_DETAILS',
-    payload: product
+    type: 'SET_ITEM_DETAIL',
+    payload: item,
   };
 }
 
-export function getProductDetail(productId) {
-  return function(dispatch) {
-    superagent(`https://webshop-db.herokuapp.com/products/${productId}`)
-      .then(response => response.body)
-      .then(product => {
-        dispatch(setProductsDetails(product));
+export function getItemDetail(itemId) {
+  return function (dispatch) {
+    superagent(`https://webshop-db.herokuapp.com/products/${itemId}`)
+      .then((response) => response.body)
+      .then((product) => {
+        dispatch(setItemDetail(product));
       });
   };
 }

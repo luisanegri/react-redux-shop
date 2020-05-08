@@ -1,6 +1,6 @@
 const reducer = (state = {}, action = {}) => {
   switch (action.type) {
-    case 'SET_PRODUCTS_DETAILS':
+    case 'SET_ITEM_DETAIL':
       return { ...action.payload };
     default:
       return state;

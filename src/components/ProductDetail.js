@@ -3,6 +3,7 @@ import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
 export default function ProductDetail(props) {
+  console.log('props', props);
   return (
     <div>
       <div className="container-fluid container-product">
@@ -44,7 +45,7 @@ export default function ProductDetail(props) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-cart"
-                onClick={() => props.addToCart(props.product)}
+                onClick={() => props.addItem(props.product)}
               >
                 Add to cart
               </button>

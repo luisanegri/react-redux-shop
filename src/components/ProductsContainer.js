@@ -29,10 +29,10 @@ class ProductsContainer extends React.Component {
     }
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     products: state.products,
-    search: state.search
+    search: state.search,
   };
 };
 
