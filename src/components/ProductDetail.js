@@ -2,23 +2,22 @@ import React from 'react';
 import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
-export default function ProductDetail(props) {
-  console.log('props', props);
+export default function ProductDetail({ product, addItem, addWish }) {
   return (
     <div>
       <div className="container-fluid container-product">
         <div className="row">
           <div className="col-md-12 col-lg-6 col-md-6 col-left">
             <ReactFancyBox
-              thumbnail={props.product.imageUrl}
-              image={props.product.imageUrl}
+              thumbnail={product.imageUrl}
+              image={product.imageUrl}
             />
           </div>
           <div className="col-md-12 col-lg-6 right-col">
             <div className="body">
-              <h4>{props.product.name}</h4>
+              <h4>{product.name}</h4>
               <div className="detail-product">
-                <span className="price-num">€{props.product.price}</span>
+                <span className="price-num">€{product.price}</span>
               </div>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -45,7 +44,7 @@ export default function ProductDetail(props) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-cart"
-                onClick={() => props.addItem(props.product)}
+                onClick={() => addItem(product)}
               >
                 Add to cart
               </button>
@@ -53,7 +52,7 @@ export default function ProductDetail(props) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-wish"
-                onClick={() => props.addWish(props.product)}
+                onClick={() => addWish(product)}
               >
                 Add to wishlist
               </button>
