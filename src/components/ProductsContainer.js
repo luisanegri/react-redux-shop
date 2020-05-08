@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ProductsList from './ProductsList';
 import { getProducts } from '../actions/products';
-import SearchForm from './SearchForm';
-import searchProducts from '../actions/searchProducts';
 
 class ProductsContainer extends React.Component {
   componentDidMount() {
