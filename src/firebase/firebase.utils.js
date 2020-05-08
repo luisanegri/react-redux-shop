@@ -5,7 +5,7 @@ import 'firebase/auth';
 const config = {
   apiKey: 'AIzaSyDBDi3FZDe-HZfzwgZXi8g9Xez7XeknSw8',
   authDomain: 'ecom-react-shop.firebaseapp.com',
-  databaseURL: 'https://ecom-react-shop.firebaseio.com',
+  databaseURL: 'https://react-redux-webshop.herokuapp.com/',
   projectId: 'ecom-react-shop',
   storageBucket: 'ecom-react-shop.appspot.com',
   messagingSenderId: '774579999288',

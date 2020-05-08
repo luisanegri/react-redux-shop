@@ -128,6 +128,10 @@ body {
   margin-left: 20px;
 }
 
+.navbar-nav-custom .nav-item {
+  cursor: pointer;
+}
+
 .body {
   padding: 20px;
 }
