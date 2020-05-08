@@ -1,4 +1,4 @@
-export const addWish = (item, id) => ({
+export const addWish = (item) => ({
   type: 'ADD_WISH',
   payload: item,
 });

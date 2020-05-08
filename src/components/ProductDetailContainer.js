@@ -25,24 +25,13 @@ class ProductDetailContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('product detail container state', state);
   return {
     product: state.productDetail,
     cart: state.cart,
   };
 };
 
-// const mapActionsToProps = (dispatch) => {
-//   console.log('dispatch', dispatch);
-//   return {
-//     getProductDetail: getProductDetail,
-//     addWish: addWish,
-//     addItem: addItem,
-//   };
-// };
-
 const mapDispatchToProps = (dispatch) => {
-  console.log('dispatchtoprops', dispatch);
   return {
     itemDetail: (item) => dispatch(getItemDetail(item)),
     addItem: (item) => dispatch(addItem(item)),

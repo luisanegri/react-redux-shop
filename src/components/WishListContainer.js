@@ -16,7 +16,6 @@ class WishContainer extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
-  console.log('wish state', state);
   return {
     wish: state.wish,
     deleteFromWishList: deleteFromWishList,
