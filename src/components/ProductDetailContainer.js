@@ -15,7 +15,7 @@ class ProductDetailContainer extends React.Component {
     return (
       <div>
         <ProductDetail
-          product={this.props.product}
+          item={this.props.item}
           addItem={this.props.addItem}
           addWish={this.props.addWish}
         />
@@ -26,7 +26,7 @@ class ProductDetailContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    product: state.productDetail,
+    item: state.productDetail,
     cart: state.cart,
   };
 };

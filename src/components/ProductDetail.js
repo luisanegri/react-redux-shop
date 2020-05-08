@@ -3,21 +3,19 @@ import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
 export default function ProductDetail({ product, addItem, addWish }) {
+  const { imageUrl, price } = product;
   return (
     <div>
       <div className="container-fluid container-product">
         <div className="row">
           <div className="col-md-12 col-lg-6 col-md-6 col-left">
-            <ReactFancyBox
-              thumbnail={product.imageUrl}
-              image={product.imageUrl}
-            />
+            <ReactFancyBox thumbnail={imageUrl} image={imageUrl} />
           </div>
           <div className="col-md-12 col-lg-6 right-col">
             <div className="body">
               <h4>{product.name}</h4>
               <div className="detail-product">
-                <span className="price-num">€{product.price}</span>
+                <span className="price-num">€{price}</span>
               </div>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
