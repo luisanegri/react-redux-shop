@@ -55,39 +55,5 @@ export default function NavBar({ cart, currentUser, itemCount }) {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-
-    // <div className="nav-c">
-    //   <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    //     <Link className="navbar-brand nav-brand-custom" to="/">
-
-    //     </Link>
-    //     <button
-    //       className="navbar-toggler"
-    //       type="button"
-    //       data-toggle="collapse"
-    //       data-target="#navbarTogglerDemo02"
-    //       aria-controls="navbarTogglerDemo02"
-    //       aria-expanded="false"
-    //       aria-label="Toggle navigation"
-    //     >
-    //       <span className="navbar-toggler-icon"></span>
-    //     </button>
-    //     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-    //       <ul className="navbar-nav mr-auto mt-2 mt-lg-0 navbar-nav-custom">
-    //         <li className="nav-item active">
-
-    //         </li>
-    //         <li className="nav-item">
-
-    //         </li>
-    //         <li className="nav-item">
-
-    //         </li>
-
-    //         <li className="nav-item"></li>
-    //       </ul>
-    //     </div>
-    //   </nav>
-    // </div>
   );
 }
