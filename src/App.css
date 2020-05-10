@@ -126,6 +126,9 @@ body {
 
 .navbar-nav-custom {
   margin-left: 20px;
+  left: auto;
+  right: 10px;
+  position: absolute;
 }
 
 .navbar-nav-custom .nav-item {
@@ -566,5 +569,12 @@ section {
     position: absolute;
     width: 100%;
     bottom: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav-custom {
+    margin-left: 0;
+    position: inherit;
   }
 }
