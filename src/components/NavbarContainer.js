@@ -11,7 +11,6 @@ class NavbarContainer extends Component {
           currentUser={this.props.user}
           itemCount={this.props.itemCount}
         />
-        ;
       </div>
     );
   }
