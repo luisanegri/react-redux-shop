@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { auth } from '../firebase/firebase.utils';
 import { Navbar, Nav } from 'react-bootstrap';
 
-export default function NavBar({ cart, currentUser, itemCount }) {
+const NavBar = ({ currentUser, itemCount }) => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="/" className="nav-brand-custom">
@@ -56,4 +56,6 @@ export default function NavBar({ cart, currentUser, itemCount }) {
       </Navbar.Collapse>
     </Navbar>
   );
-}
+};
+
+export default NavBar;

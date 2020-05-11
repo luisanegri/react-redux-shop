@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../photo-of-white-wall-1484759.jpg';
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <div className="home-image" style={{ backgroundImage: `url(${Image})` }}>
@@ -16,4 +16,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

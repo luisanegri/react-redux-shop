@@ -15,7 +15,7 @@ class ProductDetailContainer extends React.Component {
     return (
       <div>
         <ProductDetail
-          item={this.props.item}
+          product={this.props.product}
           addItem={this.props.addItem}
           addWish={this.props.addWish}
         />
@@ -24,11 +24,9 @@ class ProductDetailContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  item: state.productDetail,
-  cart: state.cart,
-});
-
+const mapStateToProps = ({ product, cart }) => {
+  return { product: product.productItem, cart };
+};
 const mapDispatchToProps = (dispatch) => {
   return {
     itemDetail: (item) => dispatch(getItemDetail(item)),

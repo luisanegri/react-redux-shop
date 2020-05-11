@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Cart({
-  cart,
-  removeItem,
-  addItem,
-  deleteFromCart,
-  cartTotal,
-}) {
+const Cart = ({ cart, removeItem, addItem, deleteFromCart, cartTotal }) => {
   const empty = !cart.cartItems.length;
   if (empty) {
     return (
@@ -29,15 +23,15 @@ export default function Cart({
         <div className="row">
           <div className="col-xs-12 col-md-4 col-left-cart">
             <h5>Your bag</h5>
-            <Link to="/products" class="btn btn-link btn-delete btn-rm-bg">
+            <Link to="/products" className="btn btn-link btn-delete btn-rm-bg">
               <span>
-                <i class="fa fa-chevron-left"></i>
+                <i className="fa fa-chevron-left"></i>
               </span>
               Keep Shopping
             </Link>
           </div>
           <div className="col-xs-12 col-md-8 col-right-cart">
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Product</th>
@@ -62,7 +56,7 @@ export default function Cart({
                             className="btn btn-id btn-rm-bg"
                             onClick={() => removeItem(item)}
                           >
-                            <i class="fa fa-minus"></i>
+                            <i className="fa fa-minus"></i>
                           </button>
                         </span>
                         <span>{item.quantity}</span>
@@ -72,7 +66,7 @@ export default function Cart({
                             className="btn btn-id btn-rm-bg"
                             onClick={() => addItem(item)}
                           >
-                            <i class="fa fa-plus"></i>
+                            <i className="fa fa-plus"></i>
                           </button>
                         </span>
                       </div>
@@ -80,7 +74,7 @@ export default function Cart({
                     <th scope="row">
                       <button
                         type="button"
-                        class="btn btn-link btn-delete btn-rm-bg"
+                        className="btn btn-link btn-delete btn-rm-bg"
                         onClick={() => deleteFromCart(item)}
                       >
                         Delete
@@ -97,4 +91,6 @@ export default function Cart({
       </div>
     </div>
   );
-}
+};
+
+export default Cart;

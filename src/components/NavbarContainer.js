@@ -17,16 +17,13 @@ class NavbarContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.cart,
-    user: state.user.currentUser,
-    itemCount: state.cart.cartItems.reduce(
-      (accumulatedQuantity, cartItem) =>
-        accumulatedQuantity + cartItem.quantity,
-      0
-    ),
-  };
-};
+const mapStateToProps = ({ cart, user }) => ({
+  cart,
+  user: user.currentUser,
+  itemCount: cart.cartItems.reduce(
+    (accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity,
+    0
+  ),
+});
 
 export default connect(mapStateToProps)(NavbarContainer);

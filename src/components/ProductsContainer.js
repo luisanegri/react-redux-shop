@@ -19,8 +19,12 @@ class ProductsContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products,
+    products: state.products.productsList,
   };
 };
 
-export default connect(mapStateToProps, { getProducts })(ProductsContainer);
+const mapDispatchToProps = (dispatch) => ({
+  getProducts: (products) => dispatch(getProducts(products)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);

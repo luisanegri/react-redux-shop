@@ -1,8 +1,3 @@
-export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const TOTAL = 'TOTAL';
-
 export const addItem = (item) => ({
   type: 'ADD_ITEM',
   payload: item,

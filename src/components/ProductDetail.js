@@ -2,8 +2,8 @@ import React from 'react';
 import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
-export default function ProductDetail({ item, addItem, addWish }) {
-  const { imageUrl, price, name } = item;
+const ProductDetail = ({ product, addItem, addWish }) => {
+  const { imageUrl, price, name } = product;
   return (
     <div>
       <div className="container-fluid container-product">
@@ -42,7 +42,7 @@ export default function ProductDetail({ item, addItem, addWish }) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-cart"
-                onClick={() => addItem(item)}
+                onClick={() => addItem(product)}
               >
                 Add to cart
               </button>
@@ -50,7 +50,7 @@ export default function ProductDetail({ item, addItem, addWish }) {
               <button
                 type="button"
                 className="btn btn-lg btn-add-wish"
-                onClick={() => addWish(item)}
+                onClick={() => addWish(product)}
               >
                 Add to wishlist
               </button>
@@ -60,4 +60,6 @@ export default function ProductDetail({ item, addItem, addWish }) {
       </div>
     </div>
   );
-}
+};
+
+export default ProductDetail;

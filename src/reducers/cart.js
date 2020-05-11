@@ -23,22 +23,6 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         cartItems: removeItemFromCart(state.cartItems, action.payload),
       };
-    // case 'INCREMENT':
-    //   const newArr1 = state.cartItems.map((product) => {
-    //     if (product.id === action.payload.id) {
-    //       product.quantity++;
-    //     }
-    //     return product;
-    //   });
-    //   return newArr1;
-    // case 'DECREMENT':
-    //   const newArr2 = state.cartItems.map((product) => {
-    //     if (product.id === action.payload.id) {
-    //       product.quantity--;
-    //     }
-    //     return product;
-    //   });
-    //   return newArr2;
     default:
       return state;
   }

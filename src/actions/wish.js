@@ -3,9 +3,7 @@ export const addWish = (item) => ({
   payload: item,
 });
 
-export const deleteFromWishList = (id) => {
-  return {
-    type: 'REMOVE_FROM_WISH_LIST',
-    payload: id,
-  };
-};
+export const deleteFromWishList = (id) => ({
+  type: 'REMOVE_FROM_WISH_LIST',
+  payload: id,
+});

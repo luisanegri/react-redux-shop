@@ -17,16 +17,14 @@ class CartContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.cart,
-    cartTotal: state.cart.cartItems.reduce(
-      (accumulatedQuantity, cartItem) =>
-        accumulatedQuantity + cartItem.quantity * cartItem.price,
-      0
-    ),
-  };
-};
+const mapStateToProps = ({ cart }) => ({
+  cart,
+  cartTotal: cart.cartItems.reduce(
+    (accumulatedQuantity, cartItem) =>
+      accumulatedQuantity + cartItem.quantity * cartItem.price,
+    0
+  ),
+});
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),

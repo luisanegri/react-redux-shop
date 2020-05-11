@@ -1,28 +1,20 @@
 import axios from 'axios';
 
-export const SET_PRODUCTS = 'SET_PRODUCTS';
-
 const baseURL = 'https://webshop-db.herokuapp.com/products';
 
-export function setProducts(products) {
-  return {
-    type: 'SET_PRODUCTS',
-    payload: {
-      products
-    }
-  };
-}
+export const setProducts = (products) => ({
+  type: 'SET_PRODUCTS',
+  payload: products,
+});
 
-export function getProducts() {
-  return function(dispatch) {
-    axios
-      .get(`${baseURL}`)
-      .then(function(response) {
-        const products = response.data;
-        return products;
-      })
-      .then(products => {
-        dispatch(setProducts(products));
-      });
-  };
-}
+export const getProducts = () => (dispatch) => {
+  axios
+    .get(`${baseURL}`)
+    .then((response) => {
+      const products = response.data;
+      return products;
+    })
+    .then((products) => {
+      dispatch(setProducts(products));
+    });
+};

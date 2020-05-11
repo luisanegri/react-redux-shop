@@ -30,10 +30,8 @@ class SignUp extends React.Component {
         password
       );
 
-      // await to finish
       await createUserProfileDocument(user, { displayName });
 
-      // when it finishes set state empty
       this.setState({
         displayName: '',
         email: '',
@@ -60,7 +58,7 @@ class SignUp extends React.Component {
         <form className="sign" onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input
-            class="form-control"
+            className="form-control"
             type="text"
             name="displayName"
             value={displayName}
@@ -70,7 +68,7 @@ class SignUp extends React.Component {
           />
           <label>Email</label>
           <input
-            class="form-control"
+            className="form-control"
             type="email"
             name="email"
             value={email}
@@ -80,7 +78,7 @@ class SignUp extends React.Component {
           />
           <label>Password</label>
           <input
-            class="form-control"
+            className="form-control"
             type="password"
             name="password"
             value={password}
@@ -90,7 +88,7 @@ class SignUp extends React.Component {
           />
           <label>Confirm password</label>
           <input
-            class="form-control"
+            className="form-control"
             type="password"
             name="confirmPassword"
             value={confirmPassword}

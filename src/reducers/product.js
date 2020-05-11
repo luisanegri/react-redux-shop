@@ -1,11 +1,11 @@
 const INITIAL_STATE = {
-  productsList: [],
+  productItem: {},
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'SET_PRODUCTS':
-      return { ...state, productsList: action.payload };
+    case 'SET_ITEM_DETAIL':
+      return { ...state, productItem: action.payload };
     default:
       return state;
   }

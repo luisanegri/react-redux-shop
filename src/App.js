@@ -47,7 +47,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavbarContainer currentUser={this.state.currentUser} />
-        {console.log('parent - props being passed', this.state.currentUser)}
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/products" component={ProductsContainer}></Route>
@@ -58,7 +57,7 @@ class App extends React.Component {
             path="/signin"
             render={() =>
               this.props.currentUser ? (
-                <Redirect to="/" />
+                <Redirect to="/products" />
               ) : (
                 <SignInAndSignUpPage />
               )

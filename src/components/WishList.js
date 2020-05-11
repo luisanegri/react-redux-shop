@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function WishList(props) {
-  const empty = !props.wish.length;
+const WishList = ({ wish, deleteFromWishList }) => {
+  const empty = !wish.length;
   if (empty) {
     return (
       <p
@@ -10,7 +10,7 @@ export default function WishList(props) {
           marginTop: '100px',
           textAlign: 'center',
           fontFamily: 'Quicksand',
-          fontWeight: 500
+          fontWeight: 500,
         }}
       >
         Your wishlist is empty!
@@ -41,8 +41,8 @@ export default function WishList(props) {
                 </tr>
               </thead>
               <tbody>
-                {props.wish.map(item => (
-                  <tr>
+                {wish.map((item) => (
+                  <tr key={item.id}>
                     <td>
                       <img
                         src={item.imageUrl}
@@ -59,7 +59,7 @@ export default function WishList(props) {
                       <button
                         type="button"
                         className="btn btn-link btn-delete"
-                        onClick={() => props.deleteFromWishList(item.id)}
+                        onClick={() => deleteFromWishList(item.id)}
                       >
                         Delete
                       </button>
@@ -73,4 +73,6 @@ export default function WishList(props) {
       </div>
     </div>
   );
-}
+};
+
+export default WishList;

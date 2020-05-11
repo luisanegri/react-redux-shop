@@ -1,20 +1,20 @@
-import superagent from 'superagent';
+import axios from 'axios';
 
-export const SET_ITEM_DETAIL = 'SET_ITEM_DETAIL';
+const baseURL = 'https://webshop-db.herokuapp.com/products';
 
-export function setItemDetail(item) {
-  return {
-    type: 'SET_ITEM_DETAIL',
-    payload: item,
-  };
-}
+export const setItemDetail = (item) => ({
+  type: 'SET_ITEM_DETAIL',
+  payload: item,
+});
 
-export function getItemDetail(itemId) {
-  return function (dispatch) {
-    superagent(`https://webshop-db.herokuapp.com/products/${itemId}`)
-      .then((response) => response.body)
-      .then((product) => {
-        dispatch(setItemDetail(product));
-      });
-  };
-}
+export const getItemDetail = (itemId) => (dispatch) => {
+  axios
+    .get(`${baseURL}/${itemId}`)
+    .then((response) => {
+      const product = response.data;
+      return product;
+    })
+    .then((product) => {
+      dispatch(setItemDetail(product));
+    });
+};
