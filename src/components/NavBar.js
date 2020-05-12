@@ -6,12 +6,14 @@ import { Navbar, Nav } from 'react-bootstrap';
 const NavBar = ({ currentUser, itemCount }) => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/" className="nav-brand-custom">
-        <span>Shop </span>
-        <span>
-          <i className="fa fa-circle"></i>
-        </span>
-      </Navbar.Brand>
+      <Link to="/">
+        <Navbar.Brand className="nav-brand-custom">
+          <span>Shop </span>
+          <span>
+            <i className="fa fa-circle"></i>
+          </span>
+        </Navbar.Brand>
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto navbar-nav-custom">
