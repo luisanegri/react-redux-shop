@@ -3,11 +3,7 @@ Demo: https://react-redux-webshop.herokuapp.com/
 
 ## Overview
 
->Web Shop with clean and minimalistic UI created using React & Redux.
-
-## UX
-
-The user can search for products, view a list of products and details about each item. On the detail page the user can see the product's description, price and add it to the cart or to the wishlist. The cart shows the chosen product, its price and quantity.
+>Web Shop created using React, Redux and Firebase.
 
 ## Wireframe
 
@@ -16,18 +12,16 @@ Created using [Figma](https://figma.com)
 ![alt text](https://i.postimg.cc/8zmqr1Kp/Untitled-1.png)
 ![alt text](https://i.postimg.cc/G2w7MVS7/Untitled-2.png)
 
-
-
 ## Features
 
+* User Authentication
 * View products list
-* Read details about a specific product
-* Add product to Cart
-* Add product to Wishlist
-* Increase/decrease quantity of items
-* Delete a chosen item
-* Calculate total according to quantity of items
-* Sign in & Sign up
+* View information about a product
+* Add a product to Cart
+* Add a product to Wishlist
+* Increase/decrease quantity of products on Cart
+* Delete a product from Cart
+* Cart total
 
 ## Technologies Used
 
@@ -40,11 +34,6 @@ Created using [Figma](https://figma.com)
 * [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
 * [Json-server](https://github.com/typicode/json-server)
 * [Firebase](https://firebase.google.com/)
-
-## Testing
-
-* The website was tested in different devices and adapted accordingly using media queries and bootstrap.
-* Manually tested each feature and component.
 
 ## Install
 
