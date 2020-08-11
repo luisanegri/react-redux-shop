@@ -1,14 +1,24 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
-const ProductDetail = ({ product, addItem, addWish }) => {
+const ProductDetail = ({ product, addItem, addWish, history }) => {
   const { imageUrl, price, name } = product;
   return (
     <div>
       <div className="container-fluid container-product">
         <div className="row">
           <div className="col-md-12 col-lg-6 col-md-6 col-left">
+            <button
+              type="button"
+              className="btn btn-lg "
+              onClick={() => history.goBack()}
+              style={{ fontSize: '15px', textDecoration: 'underline' }}
+            >
+              back to products
+            </button>
             <ReactFancyBox thumbnail={imageUrl} image={imageUrl} />
           </div>
           <div className="col-md-12 col-lg-6 right-col">
@@ -62,4 +72,4 @@ const ProductDetail = ({ product, addItem, addWish }) => {
   );
 };
 
-export default ProductDetail;
+export default withRouter(ProductDetail);
