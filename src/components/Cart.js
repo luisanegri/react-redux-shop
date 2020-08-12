@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import StripeButton from '../components/stripe-button/StripeButton';
+
 const Cart = ({ cart, removeItem, addItem, deleteFromCart, cartTotal }) => {
   const empty = !cart.cartItems.length;
   if (empty) {
@@ -80,14 +82,25 @@ const Cart = ({ cart, removeItem, addItem, deleteFromCart, cartTotal }) => {
                         Delete
                       </button>
                     </th>
-                    <td>€ {cartTotal}</td>
+                    <td>€{item.price}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <p style={{ color: 'red', fontSize: '14px', textAlign: 'center' }}>
+              * To create a successful payment, please use the 4242 4242 4242
+              4242 test card number, a valid expiration date in the future, and
+              any random CVC number *
+            </p>
+            <div
+              style={{ float: 'right', fontSize: '14px', fontWeight: 'bold' }}
+            >
+              <span>TOTAL: €{cartTotal}</span>
+            </div>
           </div>
         </div>
-        <button className="custom-button">Checkout</button>
+
+        <StripeButton price={cartTotal} />
       </div>
     </div>
   );
