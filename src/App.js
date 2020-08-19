@@ -50,7 +50,7 @@ class App extends React.Component {
         });
       } else {
         setCurrentUser(userAuth);
-        addCollectionAndDocuments('collections', productsArray);
+        addCollectionAndDocuments('products', productsArray);
       }
     });
   }
