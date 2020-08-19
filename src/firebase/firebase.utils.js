@@ -40,6 +40,24 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+// convert firebase array to object
+export const convertCollectionsSnapshotToMap = (products) => {
+  const transformedCollection = products.docs.map((doc) => {
+    // destructure obj data
+    const { imageUrl, name, price, ref, inStock } = doc.data();
+
+    return {
+      id: doc.id,
+      imageUrl,
+      name,
+      price,
+      ref,
+      inStock,
+    };
+  });
+  return transformedCollection;
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
