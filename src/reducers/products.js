@@ -1,11 +1,12 @@
+import SHOP_PRODUCTS from './shop/shop-data';
+
 const INITIAL_STATE = {
-  productsList: [],
+  productsList: SHOP_PRODUCTS,
 };
 
+console.log('INITIAL_STATE', INITIAL_STATE);
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'SET_PRODUCTS':
-      return { ...state, productsList: action.payload };
     default:
       return state;
   }

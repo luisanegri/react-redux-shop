@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
   return (
+    // <di>hello</di>
     <div className="product-list-component">
       <h4>Products</h4>
       <div className="container">

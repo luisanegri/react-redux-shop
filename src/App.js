@@ -1,18 +1,27 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
 import ProductsContainer from './components/ProductsContainer';
 import ProductDetailContainer from './components/ProductDetailContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import CartContainer from './components/CartContainer';
 import WishListContainer from './components/WishListContainer';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import NavbarContainer from './components/NavbarContainer';
 import SignInAndSignUpPage from './components/SignInAndUp';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import { connect } from 'react-redux';
+
+import {
+  auth,
+  createUserProfileDocument,
+  addCollectionAndDocuments,
+} from './firebase/firebase.utils';
 import { setCurrentUser } from './actions/user';
+import { selectCurrentUser } from './reducers/user.selectors';
+import { selectProductsForPreview } from './reducers/products.selector';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +33,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, productsArray } = this.props;
+    console.log('arr', productsArray);
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -70,8 +81,9 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  productsArray: selectProductsForPreview,
 });
 
 const mapDispatchToProps = (dispatch) => ({

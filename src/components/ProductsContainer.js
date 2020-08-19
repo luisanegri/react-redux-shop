@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductsList from './ProductsList';
-import { getProducts } from '../actions/products';
+import { createStructuredSelector } from 'reselect';
+import { selectProductsForPreview } from '../reducers/products.selector';
+// import { getProducts } from '../actions/products';
 
 class ProductsContainer extends React.Component {
-  componentDidMount() {
-    this.props.getProducts();
-  }
+  // componentDidMount() {
+  //   this.props.getProducts();
+  // }
 
   render() {
     return (
@@ -17,14 +19,12 @@ class ProductsContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products.productsList,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  getProducts: (products) => dispatch(getProducts(products)),
+const mapStateToProps = createStructuredSelector({
+  products: selectProductsForPreview,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);
+// const mapDispatchToProps = (dispatch) => ({
+//   getProducts: (products) => dispatch(getProducts(products)),
+// });
+
+export default connect(mapStateToProps, null)(ProductsContainer);
