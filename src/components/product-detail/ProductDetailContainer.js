@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductDetail from './ProductDetail';
-import { getItemDetail } from '../actions/product-detail';
-import { addItem } from '../actions/cart';
-import { addWish } from '../actions/wish';
+import { getItemDetail } from '../../actions/product-detail';
+import { addItem } from '../../actions/cart';
+import { addWish } from '../../actions/wish';
 
 class ProductDetailContainer extends React.Component {
   componentDidMount() {

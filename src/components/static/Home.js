@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Image from '../photo-of-white-wall-1484759.jpg';
+import Image from '../../landing.jpg';
 
 const Home = () => {
   return (

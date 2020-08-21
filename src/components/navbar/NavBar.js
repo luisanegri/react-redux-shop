@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { auth } from '../firebase/firebase.utils';
+import { auth } from '../../firebase/firebase.utils';
 import { Navbar, Nav } from 'react-bootstrap';
 
 const NavBar = ({ currentUser, itemCount }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { auth, signInWithGoogle } from '../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 class SignIn extends React.Component {
   constructor(props) {

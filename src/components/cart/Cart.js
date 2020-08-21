@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import StripeButton from '../components/stripe-button/StripeButton';
+import StripeButton from '../stripe-button/StripeButton';
 
 const Cart = ({ cart, removeItem, addItem, deleteFromCart, cartTotal }) => {
   const empty = !cart.cartItems.length;

@@ -1,15 +1,18 @@
 import React from 'react';
-import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import ProductsContainer from './components/ProductsContainer';
-import ProductDetailContainer from './components/ProductDetailContainer';
+
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CartContainer from './components/CartContainer';
-import WishListContainer from './components/WishListContainer';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import NavbarContainer from './components/NavbarContainer';
-import SignInAndSignUpPage from './components/SignInAndUp';
+
+import ProductsContainer from './components/products/ProductsContainer';
+import ProductDetailContainer from './components/product-detail/ProductDetailContainer';
+import CartContainer from './components/cart/CartContainer';
+import WishListContainer from './components/wishlist/WishListContainer';
+import NavbarContainer from './components/navbar/NavbarContainer';
+import SignInAndSignUpPage from './components/auth/SignInAndUp';
+import Footer from './components/static/Footer';
+import Home from './components/static/Home';
+
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './actions/user';

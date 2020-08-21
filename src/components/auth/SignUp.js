@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { auth, createUserProfileDocument } from '../firebase/firebase.utils';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
 class SignUp extends React.Component {
   constructor() {
