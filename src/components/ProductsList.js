@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
-  console.log('products prop', products);
   return (
     <div className="product-list-component">
       <h4>Products</h4>

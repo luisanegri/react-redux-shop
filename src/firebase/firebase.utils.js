@@ -47,7 +47,7 @@ export const convertCollectionsSnapshotToMap = (products) => {
     const { imageUrl, name, price, ref, inStock } = doc.data();
 
     return {
-      id: doc.id,
+      productId: doc.id,
       imageUrl,
       name,
       price,
@@ -55,8 +55,15 @@ export const convertCollectionsSnapshotToMap = (products) => {
       inStock,
     };
   });
+  console.log('transformedCollection', transformedCollection);
   return transformedCollection;
 };
+
+// export const convertDocSnapshotToSingleProduct = (product) => {
+//   const transformDoc = product
+//   const { imageUrl, name, price, ref, inStock, productId } = product.data();
+
+// };
 
 firebase.initializeApp(config);
 
