@@ -1,5 +1,5 @@
 # Shop App  
-Demo: https://react-redux-webshop.herokuapp.com/
+Demo: https://react-redux-webshop.herokuapp.com/ (it might take a little while to load the page as it's running with a free dyno)
 
 ## Overview
 
@@ -22,6 +22,7 @@ Created using [Figma](https://figma.com)
 * Increase/decrease quantity of products on Cart
 * Delete a product from Cart
 * Cart total
+* Checkout
 
 ## Technologies Used
 
@@ -34,6 +35,7 @@ Created using [Figma](https://figma.com)
 * [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
 * [Json-server](https://github.com/typicode/json-server)
 * [Firebase](https://firebase.google.com/)
+* [Stripe](https://stripe.com/)
 
 ## Install
 
