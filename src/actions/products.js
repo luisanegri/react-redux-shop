@@ -2,12 +2,22 @@ import axios from 'axios';
 
 const baseURL = 'https://webshop-db.herokuapp.com/products';
 
-export const setProducts = (products) => ({
-  type: 'SET_PRODUCTS',
+export const getProductsStart = () => ({
+  type: 'GET_PRODUCTS_START',
+});
+
+export const getProductsSuccess = (products) => ({
+  type: 'GET_PRODUCTS_SUCCESS',
   payload: products,
 });
 
+export const getProductsFailure = (errorMessage) => ({
+  type: 'GET_PRODUCTS_FAILURE',
+  payload: errorMessage,
+});
+
 export const getProducts = () => (dispatch) => {
+  dispatch(getProductsStart());
   axios
     .get(`${baseURL}`)
     .then((response) => {
@@ -15,6 +25,7 @@ export const getProducts = () => (dispatch) => {
       return products;
     })
     .then((products) => {
-      dispatch(setProducts(products));
-    });
+      dispatch(getProductsSuccess(products));
+    })
+    .catch((error) => dispatch(getProductsFailure(error.message)));
 };

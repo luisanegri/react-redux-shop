@@ -11,15 +11,21 @@ class ProductsContainer extends React.Component {
   render() {
     return (
       <div>
-        <ProductsList products={this.props.products} />
+        <ProductsList
+          products={this.props.products}
+          loading={this.props.loading}
+          errorMessage={this.props.errorMessage}
+        />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ products }) => {
   return {
-    products: state.products.productsList,
+    products: products.productsList,
+    loading: products.loading,
+    errorMessage: products.errorMessage,
   };
 };
 

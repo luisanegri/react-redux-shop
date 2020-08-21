@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, loading, errorMessage }) => {
+  if (loading) return <div className="before"> Loading... </div>;
+  if (errorMessage) return <div className="before">{errorMessage}</div>;
+
   return (
     <div className="product-list-component">
       <h4>Products</h4>

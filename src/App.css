@@ -534,6 +534,13 @@ section {
   font-size: 15px;
 }
 
+.before {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  right: 50%;
+}
+
 /* ------------- Media Queries ----------------- */
 
 @media (max-width: 400px) {
