@@ -11,12 +11,14 @@ export const setItemDetail = (item) => ({
   payload: item,
 });
 
-export const getItemDetail = (itemId) => (dispatch) => {
-  const collectionRef = firestore.collection('product').doc('productId');
-  console.log('col', collectionRef);
-  collectionRef.get().then((docRef) => {
-    console.log('data', docRef);
-  });
+export const getItemDetail = (products) => {
+  const single = firestore.doc('products/0KGcc0vn6is6yxKNBU3w');
+  console.log('singles', single);
+  // const snapShot = await single.get();
+  // console.log('snap', snapShot);
+  // collectionRef.get().then((docRef) => {
+  //   console.log('data', docRef);
+  // });
 };
 
 // retrieve whole collection
